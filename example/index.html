@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-832000-17', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Story Show Gallery - minimal example</title>
+    <!-- ssg.js and jquery have to be in the head --> 
+    <link rel="stylesheet" href="../dist/ssg.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"> </script>
+</head>
+
+<body style="background:#0e0e0e;">
+
+    <!-- SSG binds onto image hyper­links on the page auto­mati­cally. This two images will be in the gallery  --> 
+    <a href='https://www.flor.cz/blog/wp-content/uploads/urbex-flor.jpg'>This is minimal example of SSG implementation</a>
+    <a href='https://www.flor.cz/blog/wp-content/uploads/svetlusky.jpg'>The gallery runs in the No e×it mode. 
+            The whole page is just a few bare HTML tags, no reason to show it to a user.</a>
+
+    <!-- ssg.css goes before body tag -->
+    <script type="text/javascript" src="../dist/ssg.min.js"></script>
+    
+    <script>
+        // after loading ssg.js you can overwrite settings inside ssg.js and customize the gallery for current page
+        // url of a signpost to load behind the gallery
+        SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/example/ssg-loaded.html';
+        SSG.cfg.watermarkText = '〽️ Minimal';  // watermark - logo
+        SSG.cfg.watermarkFontSize = 18;
+        SSG.cfg.rightClickProtection = false;
+
+        // The gallery will run just after loading the page and noExit parameter will prevent a user to quit the gallery.
+        // The gallery behaves like a simple website, without SSG a user would see just a poor HTML page with two links. 
+        SSG.run( { noExit:true } );
+        // SSG.run( { noExit:true, fsa:true } ); an offer of fullscreen mode, there have to be an active click from a user.
+
+        // little gallery's statistics - example of SSG events. See output in JS console
+        var counter = 0;
+        var finished = false;
+        SSG.cfg.onGalleryStart = function(data) {
+            console.log('----------');
+            console.log( data.imgCount + ' images in the gallery. Starting with image: ' + data.imgName) 
+        };
+        SSG.cfg.onImgChange = function(data) { counter++; };
+        SSG.cfg.onSignpost = function() { finished = true; };
+        SSG.cfg.onGalleryExit = function(data) {
+            console.log( counter + ' images' + (finished ? ' & signpost ' : ' ') + 'viewed. ' + 'Ended ' + ( data ? 'with image: ' + data.imgName : 'on signpost' ) );
+            counter = 0;
+            finished = false;
+        };
+     </script>
+
+</body>
+</html>

@@ -6346,7 +6346,6 @@ h2.widget-title {
 }
 
 .hentry {
-	margin-bottom: 8.8%;
 	padding-top: 6.3333%;
 	border-top: 5px solid rgb(214, 97, 121) !important;
 }	
@@ -6376,6 +6375,10 @@ h2.widget-title {
 header .site-title a {
 	font-size: 222%;
 	font-weight: normal;
+}
+
+.hentry {
+	margin-bottom: 8em;
 }
 
 .entry-content  {

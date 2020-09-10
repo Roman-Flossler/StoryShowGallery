@@ -1,0 +1,240 @@
+<!-- 
+    Story Show Gallery (SSG) - https://roman-flossler.github.io/StoryShowGallery/
+    Copyright (C) Roman Flössler - SSG is Licensed under GPLv3 
+    SSG on Github: https://github.com/Roman-Flossler/Simple-Scroll-Gallery.git       
+ 
+    If you want to load this file behind gallery, write its URL in configuration section at beginning of ssg.js. 
+    JS cannot load a local file due to a security reasons, so upload this file somewhere on your website -->
+
+    <style type='text/css' media='all'>
+
+        #SSG_lastone #SSG_loadInto {
+            margin-top: 3em;
+            text-align: center;
+        }
+    
+        #SSG_lastone .SSG_signpostH1 {
+            font-size: 200%;
+            color: #ababab;
+            margin: 0em;
+            font-weight: lighter;
+        }
+    
+        #SSG_lastone p.SSG_signpostText {
+            background: none;
+            line-height: 1.6em;
+            color: #888888;
+            margin-bottom: 0 !important;
+            padding: 0;
+            text-shadow: none;
+        }
+    
+        #SSG_lastone #opening {
+            margin-bottom: 0.8em;
+        }
+    
+        #SSG_lastone .SSG_icell .SSG_icapt {
+            transform: rotate(7deg);
+            display: block;
+            margin: 0.3vh 10px 0 0;
+            color: #bfbfbf;
+            font-weight: lighter;
+        }
+    
+        #SSG_lastone a {
+            text-decoration: none;
+        }
+    
+        #SSG_lastone .SSG_icell:hover>a {
+            text-decoration: underline;
+            text-decoration-color: #FF706C;
+        }
+    
+        #SSG_lastone .SSG_icell {
+            margin-bottom: 3vh;
+            max-height: 250px;
+            margin-left: 1.5vw;
+            margin-right: 1.5vw;
+            margin-top: 2vh;
+            width: 20vw;
+            background: none;
+            display: inline-block;
+            text-align: center;
+            vertical-align: text-top;
+        }
+    
+        #SSG_lastone .SSG_icell img {
+            width: 11vw;
+            max-width: 150px;
+            border: none;
+            opacity: 1;
+            margin: 0;
+            border-radius: 100px;
+            transition: 0.3s;
+        }
+    
+        #SSG_lastone .SSG_icell:hover img {
+            border-radius: 11px;
+            transform: rotate(7deg);
+        }
+    
+    
+        @media (max-width: 860px) and (orientation: landscape),
+        (max-width: 750px) and (orientation: portrait) {
+    
+            @media (orientation: landscape) {
+                #SSG_lastone #SSG_loadInto {
+                    margin-top: 2em;
+                }
+            }
+    
+            #SSG_lastone .SSG_signpostH1 {
+                font-size: 180%;
+            }
+    
+            #SSG_lastone .SSG_icell img {
+                width: 16vw;
+            }
+        }
+    
+        @media (orientation: portrait) and (max-width: 600px) {
+    
+            #SSG_lastone .SSG_icell {
+                margin-left: 4vw;
+                margin-right: 4vw;
+                width: 39vw;
+            }
+    
+            #SSG_lastone .SSG_icell img {
+                width: 16vh;
+            }
+    
+            #SSG_lastone .SSG_icell .SSG_icapt {
+                margin: 0px 10px 0 0;
+            }
+        }
+    
+        @media (orientation: portrait) and (min-width: 601px) {
+    
+            #SSG_lastone .SSG_icell {
+                margin-bottom: 0;
+                margin-left: 2vh;
+                margin-right: 2vh;
+                width: 18vh;
+            }
+    
+            #SSG_lastone .SSG_icell img {
+                width: 14vh;
+            }
+    
+            @media (max-aspect-ratio: 11/16) {
+                #SSG_lastone .SSG_icell {
+                    width: 13.3vh;
+                }
+            }
+        }
+    
+        @media (min-width: 1400px) {
+            #SSG_lastone .SSG_icell {
+                width: 15vw;
+            }
+        }
+    
+    
+        @media (min-height: 888px) {
+    
+            #SSG_lastone #opening {
+                margin-bottom: 1.5em;
+            }
+    
+            #SSG_lastone .SSG_icell {
+                height: 29vh;
+            }
+    
+            #SSG_lastone .SSG_icell img {
+                margin: 0.1em 0 0.5em 0;
+            }
+    
+            #SSG_lastone #SSG_loadInto {
+                margin-top: 4.4em;
+            }
+        }
+    
+        @media (min-height: 1068px) {
+    
+            #SSG_lastone #opening {
+                margin-bottom: 2em;
+            }
+    
+            #SSG_lastone p.SSG_signpostText {
+                padding-top: 0.5em;
+            }
+    
+            #SSG_lastone #SSG_loadInto {
+                margin-top: 6em;
+            }
+        }
+    </style>
+    
+    <div id="opening">
+        <span class="SSG_signpostH1">See other galleries</span><br clear='all' />
+        <p class="SSG_signpostText">After the last image SSG can load this html file, edit it to your liking.</p>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/foceni-akt/">
+            <img src="https://www.flor.cz/blog/img/photos/akt.jpg">
+            <span class="SSG_icapt SSG_text">Shooting<br /> an Act</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/ceske-svycarsko-podzimni-fotosklizen/">
+            <img src="https://www.flor.cz/blog/img/photos/g-cs.jpg">
+            <span class="SSG_icapt SSG_text">Bohemian <br />Switzerland</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/urbex-ostrava-a-foceni-modelek-v-dole-michal/">
+            <img src="https://www.flor.cz/blog/img/photos/ostrava-urbex.jpg">
+            <span class="SSG_icapt SSG_text">Models shooting <br />in Michal mine</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/foto-vylet-na-island/">
+            <img src="https://www.flor.cz/blog/img/photos/island.jpg">
+            <span class="SSG_icapt SSG_text">Iceland <br />Aurora</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/kostel-duchu-a-kralik-lidozrout//">
+            <img src="https://www.flor.cz/blog/img/photos/g-kostel-duchu.jpg">
+            <span class="SSG_icapt SSG_text">Ghost church</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/cestovani-a-foceni-na-bali-a-lomboku/">
+            <img src="https://www.flor.cz/blog/img/photos/bali-lombok.jpg">
+            <span class="SSG_icapt SSG_text">Bali &amp; Lombok</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/hrbitov-vlaku/">
+            <img src="https://www.flor.cz/blog/img/photos/hrbitov_vlaku.jpg">
+            <span class="SSG_icapt SSG_text">Train cemetery</span>
+        </a>
+    </div>
+    
+    <div class="SSG_icell">
+        <a href="https://www.flor.cz/blog/faerske-ostrovy-severska-romantika-mapa-mist/">
+            <img src="https://www.flor.cz/blog/img/photos/faery.jpg">
+            <span class="SSG_icapt">Faroe Islands</span>
+        </a>
+    </div>
+    
+    <br clear='all' />
