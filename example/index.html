@@ -33,19 +33,15 @@
     <script src="https://cdn.jsdelivr.net/npm/story-show-gallery@2/dist/ssg.min.js"> </script>
     
     <script>
-        // after loading ssg.js you can overwrite settings inside ssg.js and customize the gallery for current page
-        // url of a signpost to load behind the gallery
-        SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/example/ssg-loaded.html';
+        // after loading ssg.js (and before SSG.run) you can override default settings inside ssg.js and customize the gallery:
+        // the complete list of possible settings: https://roman-flossler.github.io/StoryShowGallery/#SSGconfig
+        
+        SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/example/ssg-loaded.html';  // html file (signpost) to load behind the gallery
         SSG.cfg.watermarkText = '〽️ Minimal';  // watermark - logo
         SSG.cfg.watermarkFontSize = 18;
         SSG.cfg.rightClickProtection = false;
-
-        // The gallery will run just after loading the page and noExit parameter will prevent a user to quit the gallery.
-        // The gallery behaves like a simple website, without SSG a user would see just a poor HTML page with two links. 
-        SSG.run( { noExit:true } );
-        // SSG.run( { noExit:true, fsa:true } ); an offer of fullscreen mode, there have to be an active click from a user.
-
-        // little gallery's statistics - example of SSG events. See output in JS console
+        
+        // an example of SSG events, they are part of the configuration. This example writes gallery's stats into JS console
         var counter = 0;
         var finished = false;
         SSG.cfg.onGalleryStart = function(data) {
@@ -58,7 +54,12 @@
             console.log( counter + ' images' + (finished ? ' & signpost ' : ' ') + 'viewed. ' + 'Ended ' + ( data ? 'with image: ' + data.imgName : 'on signpost' ) );
             counter = 0;
             finished = false;
-        };
+        };        
+
+        // SSG.run will start the gallery immediately after loading the page and noExit parameter will prevent to quit the gallery.
+        SSG.run( { noExit:true } );
+        // The gallery will behave like a simple webpage. If a user could exit the gallery he would see just a poor page with two links.
+
      </script>
 
 </body>
