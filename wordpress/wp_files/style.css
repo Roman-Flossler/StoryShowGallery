@@ -6373,7 +6373,7 @@ h2.widget-title {
 }
 
 .secondary-toggle:not(.toggled-on):before  {
-	filter: brightness(1.8);
+	filter: brightness(1.3) sepia(1) hue-rotate(180deg) saturate(2);
 }
 
 header .site-title a {
