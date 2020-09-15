@@ -83,6 +83,7 @@ p.compare:after {
     color: white;
     left: 18px;
     font-size: 20px;
+    text-shadow: 0 0 13px #173c589e;
 }
 
 p.compare em {
