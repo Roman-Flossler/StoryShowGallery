@@ -6312,8 +6312,41 @@ ul.features li a img{
     margin: 3em 0;
 }
 
+#theme * {
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+}
+
+#theme {
+    display: flex;
+	justify-content: space-evenly;
+	margin: -1.8em 0 4em 0;
+}
+
+a.color {
+    cursor: pointer;    
+    border-radius: 6px;
+	box-shadow: 0 0 4px #328AA1;
+	text-decoration: none;
+	height: 1.7em;
+}
+
+a.color:hover {
+	filter: sepia() hue-rotate(144deg);
+	
+}
+
+
 * {
 	font-family: 'open sans', sans-serif !important;	
+}
+
+figcaption {
+	font-size: 16px !important;
+	font-style: italic;
+	text-align: center;
+	color: rgb(88, 88, 88) !important;
 }
 
 .entry-content {
@@ -6395,6 +6428,12 @@ header .site-title a {
 
 .gallery {
 	margin: 2em 0;
+}
+
+#theme {
+	width: 109%;	
+	margin: -1em 0 3em 0;
+	margin-left: -5%;
 }
 
 .site-header {
