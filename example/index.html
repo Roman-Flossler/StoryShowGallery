@@ -17,6 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Story Show Gallery - minimal example</title>
+    
     <!-- ssg.js and jquery have to be in the head --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/story-show-gallery@2/dist/ssg.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"> </script>
@@ -39,22 +40,7 @@
         SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/example/ssg-loaded.html';  // html file (signpost) to load behind the gallery
         SSG.cfg.watermarkText = '〽️ Minimal';  // watermark - logo
         SSG.cfg.watermarkFontSize = 18;
-        SSG.cfg.rightClickProtection = false;
-        
-        // an example of SSG events, they are part of the configuration. This example writes gallery's stats into JS console
-        var counter = 0;
-        var finished = false;
-        SSG.cfg.onGalleryStart = function(data) {
-            console.log('----------');
-            console.log( data.imgCount + ' images in the gallery. Starting with image: ' + data.imgName) 
-        };
-        SSG.cfg.onImgChange = function(data) { counter++; };
-        SSG.cfg.onSignpost = function() { finished = true; };
-        SSG.cfg.onGalleryExit = function(data) {
-            console.log( counter + ' images' + (finished ? ' & signpost ' : ' ') + 'viewed. ' + 'Ended ' + ( data ? 'with image: ' + data.imgName : 'on signpost' ) );
-            counter = 0;
-            finished = false;
-        };        
+        SSG.cfg.rightClickProtection = false;  // if TRUE, instead of a browser context menu will be shown SSG hint with full screen mode offer
 
         // SSG.run will start the gallery immediately after loading the page and noExit parameter will prevent to quit the gallery.
         SSG.run( { noExit:true } );
