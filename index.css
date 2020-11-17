@@ -483,12 +483,13 @@ ul li {
     float: none;    
     background: none;
     display: inline;
-    text-decoration: underline;
-    margin: 0;    
+    text-decoration: underline;    
+    margin: 0;
     } 
 
 .gallery span a::after, .gallery span a::before { 
-        content: ''; 
+        content: '';
+        background: none;
     }
 
 .gallery a {
@@ -1098,16 +1099,20 @@ footer {
         padding: 0 0.1em;
     }
 
-    .dark code, .dark footer {
+    .dark code {
         background: #171e1f;
         box-shadow: none;
         color: #89c5cc;
-    }    
+    }
+
+    .dark footer {
+        filter: invert(0.9) brightness(0.5);
+    }
 
     .dark .gallery a {
         background: #000000;        
         max-width: 202px;
-        filter: brightness(0.9) contrast(1.03) saturate(0.88);
+        filter: brightness(0.66) contrast(1) saturate(0.88);
         box-shadow: 0px 0px 5px #000000;
     }
 
@@ -1139,12 +1144,12 @@ footer {
     }
     
     .dark .secol .topimg.wider {
-        filter: contrast(1.3) brightness(0.73);
+        filter: contrast(1.2) brightness(0.66);
     }
 
     .dark .ssgafter {
-        filter: contrast(1) brightness(0.6) saturate(0.8);
-    }        
+        filter: contrast(1) brightness(0.55) saturate(0.8);
+    }
 
     .dark .gallery > a:hover, .dark .gallery .topimg:hover {
         box-shadow: 3px 6px 13px 1px black;
@@ -1204,6 +1209,18 @@ footer {
 
         #bulb:hover {
             opacity: 0.4;
+        }
+
+        .dark .secol .topimg.wider {
+            filter: contrast(1.1) brightness(0.66);
+        }
+        
+        .dark .gallery a {            
+            filter: brightness(0.88) contrast(0.98) saturate(1);
+        }
+
+        .dark .ssgafter {
+            filter: contrast(1.03) brightness(0.6) saturate(0.5);
         }
     }
     
