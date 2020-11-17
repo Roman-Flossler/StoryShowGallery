@@ -227,12 +227,12 @@ img.imglink {
     border-radius: 0.6em;    
 }
 
-img.imglink:hover {
-    border-bottom-style: dashed;
+img.boost {
+    filter: contrast(1.08) brightness(1.08);
 }
 
-img[alt*='watermark'] {
-    filter: contrast(1.13);
+img.imglink:hover {
+    border-bottom-style: dashed !important;
 }
 
 .limg {
@@ -1081,6 +1081,10 @@ footer {
         text-shadow: 0 0 11px black;
     }
 
+    .dark img.imglink {
+        border-bottom: 2px solid #840017;
+    }
+
     .dark p, .dark h1, .dark h2, .dark h3, .dark ul, .dark li {
         background: none;
     }
@@ -1103,7 +1107,8 @@ footer {
     .dark .gallery a {
         background: #000000;        
         max-width: 202px;
-        filter: brightness(0.81) contrast(1.03) saturate(0.88);
+        filter: brightness(0.9) contrast(1.03) saturate(0.88);
+        box-shadow: 0px 0px 5px #000000;
     }
 
     .dark .gallery .topimg a {
@@ -1134,7 +1139,7 @@ footer {
     }
     
     .dark .secol .topimg.wider {
-        filter: contrast(1.3) brightness(0.66);
+        filter: contrast(1.3) brightness(0.73);
     }
 
     .dark .ssgafter {
@@ -1150,7 +1155,7 @@ footer {
     }
 
     .dark img[alt^='signpost'] {
-        filter: brightness(0.86);    
+        opacity: 0.86;
     }
 
     .dark p.compare img {
