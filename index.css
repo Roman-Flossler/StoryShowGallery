@@ -915,7 +915,7 @@ footer {
 
     .column .mobileonly {
         margin-left: -13.1%;
-        /* border-bottom: 6px solid  #296779; */
+        border-bottom: 3px solid  #296779;
     }
 
     .secol p {
@@ -1052,6 +1052,11 @@ footer {
     @media screen and (max-width: 550px) {
         .dark ul li {
             background: radial-gradient(circle farthest-corner at 9% 2em, rgb(86, 28, 43) 0%, #202425 28px);
+        }
+
+        .dark .column .mobileonly {
+            border-bottom: none;
+            box-shadow: 0 0 16px #000b0c;
         }
     }
 
@@ -1211,12 +1216,8 @@ footer {
             opacity: 0.4;
         }
 
-        .dark .secol .topimg.wider {
-            filter: contrast(1.1) brightness(0.66);
-        }
-        
         .dark .gallery a {            
-            filter: brightness(0.88) contrast(0.98) saturate(1);
+            filter: brightness(0.88) contrast(1.03) saturate(1);
         }
 
         .dark .ssgafter {
