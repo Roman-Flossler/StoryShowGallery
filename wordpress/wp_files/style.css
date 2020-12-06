@@ -6155,6 +6155,10 @@ body:before {
 	border: none;
 }
 
+.site-main {
+    padding-top: 6%;
+}
+
 .entry-header {
     padding-right: 3%;
 }

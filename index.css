@@ -1129,7 +1129,7 @@ footer {
         background: #000000;
     }
 
-    .dark .gallery a:hover, .dark .gallery span a { 
+    .dark .gallery a:hover, .dark .gallery a.show, .dark .gallery span a { 
         filter: brightness(1) contrast(1) saturate(1);
         background: none;
     } 
@@ -1156,7 +1156,7 @@ footer {
         filter: contrast(1) brightness(0.55) saturate(0.8);
     }
 
-    .dark .gallery > a:hover, .dark .gallery .topimg:hover {
+    .dark .gallery > a:hover, .dark .gallery > a.show, .dark .gallery .topimg:hover {
         box-shadow: 3px 6px 13px 1px black;
     }
 
