@@ -288,7 +288,7 @@ code span {
 #bigcode p {
     background: white;
     margin: 0;
-    line-height: 5vh;
+    padding: 0.5em;    
     text-align: center;
     position: relative;
 }
@@ -316,6 +316,12 @@ code span {
     color: #004d70;
 }
 
+#bigcode code .switchable {
+    text-decoration: underline;    
+    text-decoration-style: dotted;
+    cursor: pointer;
+    text-underline-position: under;    
+}
 
 .column {
     float: left;
@@ -862,6 +868,13 @@ footer {
     #front-gallery img {
         width: 97px;
         margin: 2px;
+    }
+    
+    #bigcode p span {
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 0;
     }
 
     .column {
