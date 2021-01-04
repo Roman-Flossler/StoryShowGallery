@@ -36,7 +36,7 @@
     <meta itemprop="image" content="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-share.jpg"/>
     
     <link rel='stylesheet' href='index.css' type='text/css' media='all' />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/story-show-gallery@2/dist/ssg.min.css">
+    <link rel="stylesheet" href="dist/ssg.min.css" type="text/css" media="all">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
         var colorMode = window.matchMedia( '(prefers-color-scheme: dark)' ).matches ? 'dark' : 'light';        
@@ -213,7 +213,7 @@
             </code>            
 
             <p>Story Show Gallery looks for all hyper&shy;links (&lt;a&gt; tags) on the page that points to a picture file 
-                (extensions: jpg, jpeg, JPG, png, PNG, gif, GIF, webp). And adds to all these hyper&shy;links an <strong>onclick function</strong> 
+                (extensions: jpg, jpeg, JPG, JPEG, png, PNG, gif, GIF, webp). And adds to all these hyper&shy;links an <strong>onclick function</strong> 
                 which runs the gallery. Unless nossg class is used. </p>   
  
              <p>A <strong>photo caption</strong> a is taken from a thumbnail's <em>alt</em> att&shy;ribute or a link text. 
@@ -290,7 +290,8 @@
                If you click on the <em>outsideImg.jpg</em> hyperlink, it will display in the gallery together with inside images. But when you click on some inside image hyperlink, 
                only images inside <em>section.ssg</em> will display in the gallery. </p>
 
-            <p>SSG will ignore image hyperlinks (or the whole gallery) with <strong>nossg</strong> class. Images will open normally into browser's tab.
+            <p>SSG will ignore image hyperlinks (or the whole gallery) with <strong>nossg</strong> class. Images will open normally into browser's tab. 
+                <a href="https://roman-flossler.github.io/StoryShowGallery/photos/Reykjadalur.jpg" class="nossg" target="_blank">Example</a>
             </p>    
 
             <p>Image linked with the <strong>gossg</strong> class can be only an initial image of the gallery. If a user want to see it and clicks on it. 
@@ -387,39 +388,53 @@ data.imageCaption // image caption for current image
            <!-- _____________________________________ -->
             
             <p> You can run the gallery by Javascript calling <strong>SSG.run</strong> method. 
-               Example: the body's onload event runs the gallery immediately after a page is loaded:</p>
-            <code>                
-                &lt;body onload='<span>SSG.run()</span>'&gt; 
+                SSG.run without para­meters shows photos from all image hyperlinks on the page. 
+                Excluded are image hyperlinks with nossgg and gossg class.
+            </p>
+            <code class="active" onclick="SSG.run();">                
+                SSG.run()
             </code>
 
             <p>The <strong>fs:true</strong> parameter will activate full screen mode. Use the <strong>fsa</strong> parameter instead, 
                 if the gallery is initiated without an active click from a user. That active click is needed for
                 entering fullscreen mode. The fsa para&shy;meter will ask if a user wants to switch into fullscreen mode.</p>
-            <code>
-                &lt;a onclick='<span>SSG.run({fs:true})</span>'&gt; Show gallery&lt;/a&gt;
+            <code class="active" onclick="SSG.run( {fs:true} );">
+                SSG.run( { fs:true } )
             </code>
             
             
 
-            <p>Run SSG immediately after page loads is useful, when the html page is just a plain list of links without any design. 
-                There is nothing much to see without SSG. So the gallery can run in the <strong>no e&times;it mode</strong> - no close icon, no ESC key.</p>
+            <p>The gallery can run in the <strong>no e&times;it mode</strong> - no close icon, no ESC key. 
+                It is useful, when a html page is just a plain list of image links without any design and the gallery 
+                starts immediately after a page loads. In this case the fsa parameter is needed for activating full screen mode.
+            </p>
             <code>                
-                &lt;body onload='<span>SSG.run({noExit:true})</span>'&gt; 
+                &lt;body onload='<span>SSG.run( { noExit:true, fsa:true  } )</span>'&gt; 
             </code>
             <p><a href="https://roman-flossler.github.io/StoryShowGallery/example/#svetlusky" target="_blank">Sample gallery with no e×it mode</a></p>
 
             <p>
-                <br>Use <strong>initImgId</strong> parameter to set the initial image in the gallery. SSG auto&shy;mati&shy;cally numbers image hyperlinks on the page, the first photo has ID 0.</p>
-            <code>
-                &lt;button onclick="<span>SSG.run( {initImgID: 6} )</span>"&gt; Click me &lt;/button&gt;
+                <br>Use <strong>initImgId</strong> parameter to set the initial image in the gallery. 
+                SSG auto&shy;mati&shy;cally numbers image hyperlinks on the page, the first photo has ID 0.
+                In this case, the first photo will be the photo with ID 13, even if it has gossg class. 
+            </p>
+            <p>
+                The initImgID parameter respects .ssg classes and shows only pictures from the gallery, which contains initImgID picture. 
+                Also the gallery theme is taken from css class of the related gallery. 
+            </p>
+            <code class="active" onclick="SSG.run({ initImgID: 13 });">
+               SSG.run( { initImgID: 13 } )
             </code>
 
             <p>
                 <br>With the <strong>cfg</strong> parameter you can override global configuration, it applies only for the actual gallery run.
                  The cfg parameter is an object which have the same parameters as the 
-                 <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible');">global configuration</a>. </p>
-            <code>
-                &lt;a onclick="<span>SSG.run(  cfg: { scrollDuration: 1333, theme:'black', fileToLoad = 'speciallinks.html' } )</span>"&gt; Click me &lt;/a&gt;
+                 <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible');">global configuration</a>.
+                 This gallery has slower scroll animation, black theme, portrait fullscreen, different watermark and no signpost.
+            </p>
+            
+            <code class="active" onclick="SSG.run( { fs:true, cfg: { scrollDuration: 999, theme:'black', mobilePortraitFS:true, watermarkText: '〽️ Mia', fileToLoad: null }})">
+                SSG.run( { fs:true, cfg: { scrollDuration: 999, theme:'black', mobilePortraitFS:true, watermarkText: '〽️ Mia', fileToLoad: null }} )
             </code>
 
             <p>You can pass into SSG an array of images and captions to show them in the gallery via <strong>imgs</strong> parameter.
@@ -428,64 +443,18 @@ data.imageCaption // image caption for current image
              The <em>imgsPos:'whole'</em> shows in the gallery just <em>imgs</em>. It is a default parameter, which is no need to use. 
             If you don't define imgs parameter, imgsPos will be ignored.
             </p>
-            <code>
-                SSG.run( {imgs: [ { href: '<span>img URL</span>', alt: '<span>img caption</span>, author: '<span>photo by…</span>' }, {...} ], imgsPos:'<span>start</span>'} );
-            </code>
-
-            <h3>SSG.restart() method</h3>
-            <p>Restart method ends the running SSG gallery and then calls SSG.run with new parameters. It has the same parameters as the SSG.run method. 
-               On this page the restart method is used in singpost after the gallery. It runs another gallery without exit fullscreen mode or reloading a page.
-            </p>
-
-            <a name='examples'></a>
-
-            <h2>Examples of initiating the gallery by SSG.run() method</h2>
-            <!-- _____________________________________ -->
 
             <p>
-                <a class="showgal" onclick="SSG.run();" >
-                    <span>&#8984;</span> Run the gallery</a> by Javascript calling:
-            </p>
-                    <code>
-                    SSG.run()
-                    </code>
-            <p>
-                The first picture in this gallery will be the picture with ID 0 (unless it doesn't have nossg class ). SSG.run without para&shy;meters shows photos from all galleries on the page.
-            </p>
-            <br>
-            <p>
-                <a class="showgal"  
-                onclick="SSG.run({ fs:true, initImgID: 13 });"
-                >            
-                <span>&#8984;</span> Run the gallery</a> by Javascript calling:
-                <p></p>
-                <code>SSG.run({ initImgID: 13, fs:true })</code>
-                <p>
-                The first photo will be the photo with ID 13, even if it has gossg class. The initImgID parameter respects .ssg classes and shows only pictures from galleries related to initImgID picture.
-                Also the gallery theme is taken from css class of related gallery. The fs:true activates full screen mode.
-            </p><br>
-
-            <p>
-                <a class="showgal"  
-                onclick="SSG.run( { imgs: [ { href: 'https://www.flor.cz/blog/wp-content/uploads/traelanipa.jpg', alt: 'Trælanípa (Slave) Cliff - in Viking age slaves were pushed off the cliff.' } ], imgsPos:'start', initImgID: 12 });"
-                >
-                <span>&#8984;</span> Run the gallery</a> by Javascript calling:
-                </p>
-                <code>SSG.run( { imgs: [ { href: 'traelanipa.jpg', alt: 'Trælanípa (Slave) Cliff' } ], imgsPos:'start', initImgID: 12 });</code>
-                <p>
                 The imgsPos parameter tells the gallery to put traelanipa.jpg before the gallery which contains image with ID 12.
             </p>
-            <br>            
+            <code class="active" onclick="SSG.run( { imgs: [ { href: 'https://www.flor.cz/blog/wp-content/uploads/traelanipa.jpg', alt: 'Trælanípa (Slave) Cliff - in Viking age slaves were pushed off the cliff.' } ], imgsPos:'start', initImgID: 12 });">
+               SSG.run( { imgs: [ { href: 'traelanipa.jpg', alt: 'Trælanípa Cliff' } ], imgsPos:'start', initImgID: 12 });</code>
 
             <p>
-
-                    <a class="showgal"  
-                    onclick="SSG.run( { imgs: iceland, fs:true, initImgID: 1 });"
-                    >
-                    <span>&#8984;</span> Run the gallery</a> by Javascript calling:
+                Without the imgsPos parameter, in the gallery will be only photos from array iceland. The initImgID works even with arrays.                    
             </p>
-            <code style="white-space: pre-wrap; overflow: visible">
-SSG.run( { imgs: iceland, fs:true, initImgID: 1 });
+            <code class="active" style="white-space: pre-wrap; overflow: visible" 
+            onclick="SSG.run( { imgs: iceland, fs:true, initImgID: 1 });"> SSG.run( { imgs: iceland, fs:true, initImgID: 1 });
 --------
 
 iceland = [];
@@ -502,23 +471,13 @@ iceland = [];
      href: 'img/iceland-horses.jpg'     
  };                        
                     </code>
-                <p>
-                    Without the imgsPos parameter, in the gallery will be only photos from array iceland. The initImgID works even with arrays.
-        
-                </p>
-                <br>
+                
+            <h3>SSG.restart() method</h3>
+            <p>Restart method ends the running SSG gallery and then calls SSG.run with new parameters. It has the same parameters as the SSG.run method. 
+               On this page the restart method is used in singpost after the gallery. It runs another gallery without exit fullscreen mode or reloading a page.
+            </p>
 
-                <p>
-                    <a class="showgal"  
-                    onclick="SSG.run({ imgs: iceland, fs:true, cfg: { scrollDuration: 1111, theme:'black', mobilePortraitFS:true, watermarkText: '🌋 Iceland', fileToLoad: null }});"
-                    >            
-                    <span>&#8984;</span> Run the gallery</a> by Javascript calling:
-                    <p></p>
-                    <code>SSG.run( { imgs: iceland, fs:true, cfg: { scrollDuration: 1111, theme:'black', mobilePortraitFS:true, watermarkText: '🌋 Iceland', fileToLoad: null }} )</code>
-                    <p>
-                    The gallery with local settings. It has slower scroll animation, black theme, portrait fullscreen, different watermark and no signpost.
-                </p><br>                
-
+  
         
         <a name='js-module'></a>
 
@@ -589,10 +548,10 @@ iceland = [];
                     Story Show Gallery also supports text hyper&shy;links. All four follow&shy;ing pict&shy;ures will appear in separate gallery (because of .ssg class):
                 </p>
                 <p class="ssg ssglight">
-                        <a href='https://roman-flossler.github.io/StoryShowGallery/photos/massive-pink-rabbit-maneater.JPG'>&#128048; Massive pink rabbit man&#x2011;eater</a> - a text link to a photo. <br>
-                        <a href="https://roman-flossler.github.io/StoryShowGallery/photos/lombok-bangkang-cave.jpeg" target="_blank">Enlightment inside Bankang cave</a> <br>
-                        <a href='some-nice-image.JPEG' target="_blank">	&#128279; A broken link - You will notice it before site visitors do</a><br> 
-                        <a href="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-logo.jpg"></a> &lArr; <strong>an empty (invisible) link</strong> to the picture with SSG logo.
+                    <a href='https://roman-flossler.github.io/StoryShowGallery/photos/massive-pink-rabbit-maneater.JPG'>&#128048; Massive pink rabbit man&#x2011;eater</a> - a text link to a photo. <br>
+                    <a href="https://roman-flossler.github.io/StoryShowGallery/photos/lombok-bangkang-cave.jpeg" target="_blank">Enlightment inside Bankang cave</a> <br>
+                    <a href='some-nice-image.JPEG' target="_blank">	&#128279; A broken link - You will notice it before site visitors do</a><br> 
+                    <a href="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-logo.jpg"></a> &lArr; <strong>an empty (invisible) link</strong> to the picture with SSG logo.
                 </p>
             </div>
 
@@ -607,7 +566,6 @@ iceland = [];
                 <li><a href="#order">Order of photos in the gallery</a></li>
                 <li><a href="#deeplinking">Deep linking, scrolling</a></li>                
                 <li><a href="#ssg-run">SSG.run & SSG.restart method</a></li>
-                <li><a href="#examples">SSG.run() examples</a></li>
                 <li><a href="#js-module">SSG as a Javascript module</a></li>
                 <li class="mobileonli"><a href="#themes">🎨 Visual themes</a></li>
             </ol>
@@ -844,7 +802,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
 
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/story-show-gallery@2/dist/ssg.min.js"> </script>
+    <script src="dist/ssg.min.js"></script>
     <script>
     SSG.cfg.fileToLoad = 'https://cdn.jsdelivr.net/npm/story-show-gallery@2/src/ssg-loaded.html';    
     SSG.cfg.watermarkText = window.screen.width > 933 ? '<b>ꐠ</b> Story Show Gallery' : '<b>ꐠ</b> SSG';
