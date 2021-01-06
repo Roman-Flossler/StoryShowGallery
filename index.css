@@ -281,11 +281,12 @@ code.active::before {
 }
 
 code.active:hover:before {
-    border-left: 12px solid #0084b8;
+    transform: scale(1.25);
 }
 
 code.active {
     cursor: pointer;
+    margin-bottom: 5.5em;
 }
 
 #bigcode {
@@ -307,7 +308,7 @@ code.active {
 #bigcode p {
     background: white;
     margin: 0;
-    padding: 0.5em;    
+    padding: 0.5em 1.5em 0.5em 0.5em;    
     text-align: center;
     position: relative;
 }
@@ -315,7 +316,7 @@ code.active {
 #bigcode p span {
      position: absolute;
      left: auto;
-     right: 1em;
+     right: 0.2em;
      font-size: 44px;
      color: #518b99;
      cursor: pointer;

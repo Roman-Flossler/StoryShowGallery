@@ -283,7 +283,8 @@
             <p>The <strong>ssg</strong> class creates a separate gallery, assign it to some parent element of many picture hyper&shy;links. 
                 In the gallery will show only the pictures that are inside the element with the ssg class. Outside images creates a gallery with id#0.</p>
 
-            <p>The <strong>fs</strong> class will activate full screen mode.</p>
+            <p>The <strong>fs</strong> class will activate full screen mode. There are some exceptions, tablets & mobile landscape go everytime in full screen, 
+                it solves problems with mobile browsers</p>
 
             <p>Image hyperlinks that aren't part of any separate gallery, will bind to the gallery (or hyperlinks) with <strong>vipssg</strong> class. 
                So that they won't display alone. <br>
@@ -366,6 +367,10 @@ data.imageCaption // image caption for current image
                 An address of each photo is shown in a browser’s navi&shy;gation bar while browsing through the gallery.
                  In full screen mode you can get a picture address via social share icon.
             </p>
+            <p>
+                <strong>Full screen mode</strong> cannot be activated without a user click, so SSG will show a full screen offer if the deep linked image has fs class.
+                A full screen offer is also shown in case of tablets and mobile phones in landscape mode. It solves problems with mobile browsers.
+            </p>
 
             <a name='scrolling'></a>
             <h2>Vertical scrolling through the gallery</h2>
@@ -404,17 +409,16 @@ data.imageCaption // image caption for current image
             
             
 
-            <p>The gallery can run in the <strong>no e&times;it mode</strong> - no close icon, no ESC key. 
-                It is useful, when a html page is just a plain list of image links without any design and the gallery 
+            <p>The gallery can run in the <strong>no e&times;it mode</strong> - no close icon, no ESC key - 
+                <a href="https://roman-flossler.github.io/StoryShowGallery/example/#svetlusky" target="_blank">see sample gallery</a>.
+                No e&times;it mode is useful, when a html page is just a plain list of image links without any design and the gallery 
                 starts immediately after a page loads. In this case the fsa parameter is needed for activating full screen mode.
             </p>
-            <code>                
+            <code style="margin-bottom: 5.5em;">
                 &lt;body onload='<span>SSG.run( { noExit:true, fsa:true  } )</span>'&gt; 
             </code>
-            <p><a href="https://roman-flossler.github.io/StoryShowGallery/example/#svetlusky" target="_blank">Sample gallery with no e×it mode</a></p>
 
-            <p>
-                <br>Use <strong>initImgId</strong> parameter to set the initial image in the gallery. 
+            <p>Use <strong>initImgId</strong> parameter to set the initial image and so the gallery. 
                 SSG auto&shy;mati&shy;cally numbers image hyperlinks on the page, the first photo has ID 0.
                 In this case, the first photo will be the photo with ID 13, even if it has gossg class. 
             </p>
@@ -427,14 +431,14 @@ data.imageCaption // image caption for current image
             </code>
 
             <p>
-                <br>With the <strong>cfg</strong> parameter you can override global configuration, it applies only for the actual gallery run.
-                 The cfg parameter is an object which have the same parameters as the 
+                With the <strong>cfg</strong> parameter you can override global configuration, it applies only for the current gallery run.
+                 The cfg is an object which have the same properties as the 
                  <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible');">global configuration</a>.
-                 This gallery has slower scroll animation, black theme, portrait fullscreen, different watermark and no signpost.
+                 Following gallery run has slower scroll animation, black theme, fullscreen portrait, different watermark and no signpost.
             </p>
             
-            <code class="active" onclick="SSG.run( { fs:true, cfg: { scrollDuration: 999, theme:'black', mobilePortraitFS:true, watermarkText: '〽️ Mia', fileToLoad: null }})">
-                SSG.run( { fs:true, cfg: { scrollDuration: 999, theme:'black', mobilePortraitFS:true, watermarkText: '〽️ Mia', fileToLoad: null }} )
+            <code class="active" onclick="SSG.run( { initImgID:0, fs:true, cfg: { scrollDuration: 999, theme:'black', mobilePortraitFS:true, watermarkText: '〽️ Mia', fileToLoad: null }})">
+                SSG.run( { initImgID:0, fs:true, cfg: { scrollDuration: 999, theme:'black', mobilePortraitFS:true, watermarkText: '〽️ Mia', fileToLoad: null }} )
             </code>
 
             <p>You can pass into SSG an array of images and captions to show them in the gallery via <strong>imgs</strong> parameter.
@@ -807,7 +811,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     SSG.cfg.fileToLoad = 'https://cdn.jsdelivr.net/npm/story-show-gallery@2/src/ssg-loaded.html';    
     SSG.cfg.watermarkText = window.screen.width > 933 ? '<b>ꐠ</b> Story Show Gallery' : '<b>ꐠ</b> SSG';
     SSG.cfg.watermarkFontSize = window.screen.width > 933 ? 18 : 20;
-    SSG.cfg.theme = 'dim'
+    SSG.cfg.theme = 'dim';    
     
     // example of SSG events, they are part of the configuration. This example writes gallery's stats into JS console
     var counter = 0;
