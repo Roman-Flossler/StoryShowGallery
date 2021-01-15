@@ -240,7 +240,7 @@
 
             <a name='minify'></a>
             <h2>SSG files and minifying</h2>
-            <!-- _____________________________________ -->            
+            <!-- _____________________________________ -->
 
             <p>Story Show Gallery consists of three files placed in the <strong>src</strong> directory:</p>
                 <ul>
@@ -319,7 +319,7 @@
 
             </p>
             <code style="white-space: pre;">
-SSG.cfg.onGalleryStart = function(data) {                  
+SSG.cfg.onGalleryStart = function(data) {
     console.log( data.imgCount + ' images in the gallery. 
                  Starting with image: ' + data.imgName);
 };
@@ -490,9 +490,6 @@ iceland = [];
         <p>Story Show Gallery can also work as a Javascript module. Just add into ssg.js file this line to export SSG object: 
         </p>
         <code> export default SSG; </code>
-                        
-
-
 
             <br style="clear: both" />
         </article>
@@ -500,7 +497,7 @@ iceland = [];
         <!-- _____________________________________ column-article division _____________________________________ -->
 
 
-        <article class="column secol">        
+        <article class="column secol">
     
             
             <div id="before-menu">
@@ -591,13 +588,13 @@ iceland = [];
 SSG.cfg.scrollDuration = <em>500;</em>
 
 <span>// Force SSG to always display in fullscreen - true/false</span>
-SSG.cfg.alwaysFullscreen = <em class="switchable" onclick="switchParam('alwaysFullscreen',this)">false;</em>
+SSG.cfg.alwaysFullscreen = <em class="switchable" onclick="switchParam('alwaysFullscreen',this)">false</em><em>;</em>
 
 <span>// Force SSG to never display in fullscreen - true/false There is an exception for smartphones and tablets</span>
-SSG.cfg.neverFullscreen = <em class="switchable" onclick="switchParam('neverFullscreen',this)">false;</em>
+SSG.cfg.neverFullscreen = <em class="switchable" onclick="switchParam('neverFullscreen',this)">false</em><em>;</em>
 
 <span>// When a mobile phone is in portrait mode, start SSG in fullscreen mode. But only if FS is demanded - fs class or fs:true.</span>
-SSG.cfg.mobilePortraitFS = <em class="switchable" onclick="switchParam('mobilePortraitFS',this)">false;</em>
+SSG.cfg.mobilePortraitFS = <em class="switchable" onclick="switchParam('mobilePortraitFS',this)">false</em><em>;</em>
 
 <span>// Visual theme of the gallery - four possible values: dim, light, black, dark (default)</span>
 SSG.cfg.theme = <em>'dark'</em>
@@ -607,27 +604,27 @@ SSG.cfg.theme = <em>'dark'</em>
 SSG.cfg.fileToLoad = <em>null;</em>
 
 <span>// display social share icon and menu</span>
-SSG.cfg.socialShare = <em class="switchable" onclick="switchParam('socialShare',this)">true;</em>
+SSG.cfg.socialShare = <em class="switchable" onclick="switchParam('socialShare',this)">true</em><em>;</em>
 
 <span>// log image views into Google Analytics - true/false. SSG supports only ga.js tracking code.</span>
 SSG.cfg.logIntoGA = <em>true;</em>
 
 <span>// Protect photos from being copied via right click menu - true/false</span>
-SSG.cfg.rightClickProtection = <em class="switchable" onclick="switchParam('rightClickProtection',this)">true;</em>
+SSG.cfg.rightClickProtection = <em class="switchable" onclick="switchParam('rightClickProtection',this)">true</em><em>;</em>
 
 <span>// Caption location depends on a photo size vs. screen size and SSG.cfg.preferedCaptionLocation.</span>
 <span>// Negative number => more likely side caption. Positive number => more likely caption below the photo.</span>
 <span>// If the number will be too large (eg: 300 or -300 ) a caption will be only in one location.</span>
-SSG.cfg.preferedCaptionLocation = <em class="switchable" onclick="switchParam('preferedCaptionLocation',this)" > 0 </em>;
+SSG.cfg.preferedCaptionLocation = <em class="switchable" onclick="switchParam('preferedCaptionLocation',this, [0,8])" > 0 </em><em>;</em>
 
 <span>// Side caption for smaller, landscape oriented photos, where is enough space below them as well as on their side.</span>
-SSG.cfg.sideCaptionforSmallerLandscapeImg = <em class="switchable" onclick="switchParam('sideCaptionforSmallerLandscapeImg',this)" >false;</em>  <span>// false means caption below, true side caption</span>
+SSG.cfg.sideCaptionforSmallerLandscapeImg = <em class="switchable" onclick="switchParam('sideCaptionforSmallerLandscapeImg',this)" >false</em><em>;</em>  <span>// false means caption below, true side caption</span>
 
 <span>// Locking the scale of mobile viewport at 1. Set it to true if the gallery has scaling problem on your website. </span>
 SSG.cfg.scaleLock1 = <em>false;</em> 
 
 <span>// Show first 3 images of a separate gallery together - e.g. third image clicked - image order will be 3,1,2,4,5,6...</span>
-SSG.cfg.showFirst3ImgsTogether = <em class="switchable" onclick="switchParam('showFirst3ImgsTogether',this)">true;</em>
+SSG.cfg.showFirst3ImgsTogether = <em class="switchable" onclick="switchParam('showFirst3ImgsTogether',this)">true</em><em>;</em>
 
 <span>// Watermark - logo configuration. Enter watermark text or image URL to display it</span>
 SSG.cfg.watermarkWidth = <em>147;</em> <span>// image watermark width in pixels, it is downsized on smaller screens.</span>
@@ -653,7 +650,7 @@ SSG.cfg.copyButton  = <em>"⎘ Copy the link to clipboard";</em>
 SSG.cfg.linkPaste = <em>"…and you can paste it anywhere via ctrl+v";</em>
 
 <span>// in the portrait mode the gallery suggest to turn phone into landscape mode</span>
-SSG.cfg.showLandscapeHint = <em class="switchable" onclick="switchParam('showLandscapeHint',this)" >true;</em>
+SSG.cfg.showLandscapeHint = <em class="switchable" onclick="switchParam('showLandscapeHint',this)" >true</em><em>;</em>
 SSG.cfg.landscapeHint = <em>'photos look better in landscape mode &lt;span&gt;😉&lt;/span&gt;';</em>
 
 <span>// SSG events - see complete example of SSG events in the example directory</span>
@@ -708,7 +705,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
             demo[ 3 ] = {
                 href: 'https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-responsive-modes-fullscreen.jpg',
                 alt: 'Captions can be below the image or next to the image according to space on display.'
-            };                                    
+            };
 
 
             jQuery(window).on('load', function() {
@@ -721,7 +718,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
                     jQuery('#bigcode').toggleClass('visible');
                 }
                 if (location.hash == '#play') {
-                    window.stop();                    
+                    window.stop();
                     SSG.run( { imgs: demo, fsa:true, cfg: {  fileToLoad: 'https://roman-flossler.github.io/StoryShowGallery/play.html' }  });
                     SSG.loadingStopped = true;
                 }
@@ -747,7 +744,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
 
             var actimg = 1;
             var actimgInv = 7
-            var afterFirstRun = false;            
+            var afterFirstRun = false;
 
             function lightning() {
                 if ( SSG.running ) {
@@ -778,7 +775,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
             }
             var countShow = 0;
             var imgCount = 0;
-            function showHover() {                
+            function showHover() {
                 countShow = (countShow + 1) % 10;
                 jQuery('.gallery > a:nth-child(' +  countShow  + ')').toggleClass('show');
                 jQuery('.gallery > a:nth-child(' +  (countShow - 1)  + ')').toggleClass('show');   
@@ -791,9 +788,9 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
                 jQuery('.gallery a:nth-child(' +  (countShow)  + ')').removeClass('show');
             }
 
-            function initShow() {                
+            function initShow() {
                 show = setInterval( showHover, 444);
-                jQuery('.gallery > a').on('mouseover', stopShow );                
+                jQuery('.gallery > a').on('mouseover', stopShow );
             }
 
             jQuery('.gallery img').on('load', function() {
@@ -801,15 +798,14 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
                 if (imgCount==7) initShow();
             });
 
-            function switchParam(param, elem) {
-                if (param == 'preferedCaptionLocation') {
-                    SSG.cfg.preferedCaptionLocation = SSG.cfg.preferedCaptionLocation == 0 ? 16 : 0;
-                    elem.textContent = ' ' + SSG.cfg.preferedCaptionLocation + ' ';
-                    elem.style.textDecorationStyle = 'wavy';
-                    return;
+            function switchParam(param, elem, values) {
+                if (values) {
+                    SSG.cfg[param] = SSG.cfg[param] == values[0] ? values[1] : values[0];
+                } else {
+                    SSG.cfg[param] = !SSG.cfg[param];
                 }
-                SSG.cfg[param] = !SSG.cfg[param];
-                elem.textContent = SSG.cfg[param] + ';';
+                var space = values ? ' ' : '';
+                elem.textContent = space + SSG.cfg[param] + space;
                 elem.style.textDecorationStyle = 'wavy';
             }
 

@@ -35,6 +35,8 @@ SSG.cfg.rightClickProtection = true;
 SSG.cfg.sideCaptionforSmallerLandscapeImg = false;  // false means caption below
 // in other cases caption position depends on photo size vs. screen size.
 
+SSG.cfg.preferedCaptionLocation =  8;
+
 // Locking the scale of mobile viewport at 1. Set it to true if the gallery has scaling problem on your website. 
 SSG.cfg.scaleLock1 = false; 
 
