@@ -31,6 +31,8 @@ SSG.cfg.logIntoGA = true;
 // Protect photos from being copied via right click menu - true/false
 SSG.cfg.rightClickProtection = true;
 
+SSG.cfg.globalAuthorCaption =  "photo by Flor" ;
+
 // Side caption for smaller, landscape oriented photos, where is enough space below them as well as on their side. true/false
 SSG.cfg.sideCaptionforSmallerLandscapeImg = false;  // false means caption below
 // in other cases caption position depends on photo size vs. screen size.
@@ -69,4 +71,4 @@ SSG.cfg.showLandscapeHint = true;
 SSG.cfg.landscapeHint = 'photos look better in landscape mode <span>😉</span>';
 
 // URL of the HTML file to load behind the gallery (usually a signpost to other galleries). Set to null if you don't want it.
-SSG.cfg.fileToLoad = null;   // More info about signpost is at https://ssg.flor.cz/
+SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.html';   // More info about signpost is at https://ssg.flor.cz/
