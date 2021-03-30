@@ -6325,10 +6325,15 @@ ul.features li a img{
 #theme {
     display: flex;
 	justify-content: space-evenly;
-	margin: -1.8em 0 4em 0;
+	margin: 3em 0 1em 0;
+	opacity: 0.9;	
 }
 
-a.color {
+#theme a {
+	color: #cecece;
+}
+
+#theme a {
     cursor: pointer;    
     border-radius: 6px;
 	box-shadow: 0 0 4px #328AA1;
@@ -6336,11 +6341,9 @@ a.color {
 	height: 1.7em;
 }
 
-a.color:hover {
-	filter: sepia() hue-rotate(144deg);
-	
+#theme a:hover {
+	filter: sepia() hue-rotate(144deg);	
 }
-
 
 * {
 	font-family: 'open sans', sans-serif !important;	
