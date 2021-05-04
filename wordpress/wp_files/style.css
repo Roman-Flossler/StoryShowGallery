@@ -6524,7 +6524,7 @@ header .site-title a, .site-title:after, header .site-description {
 .site-title:after {
 	color: rgb(88, 186, 214);
 	content: 'Wordpress plugin by Roman Flössler';
-	width: 128%;
+	width: 81vw;
 }
 
 .gallery, .wp-block-gallery {
