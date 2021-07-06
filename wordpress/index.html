@@ -91,7 +91,7 @@
 		
 			
 			
-<article class="post-201 post type-post status-publish format-standard hentry category-uncategorized">
+<article id="post-201" class="post-201 post type-post status-publish format-standard hentry category-uncategorized">
 	
 	<header class="entry-header">
 		<h2 class="entry-title">Show a story with your photos!</h2>	</header><!-- .entry-header -->
@@ -300,41 +300,53 @@
 		<h2 class="entry-title">Controlling Story Show Gallery by CSS classes</h2>	</header><!-- .entry-header -->
 	<div class="entry-content">
 
-	<p>You can control each gallery or image individually by CSS classes. Thera are 7 control classes four of them are for visual themes.</p>
+	<p>You can control each gallery or image individually by CSS classes. Thera are 8 control classes, four of them are for visual themes.</p>
 
 		
 <p>With <strong>nossg</strong> class you can selectively deactivate Story Show Gallery for some image or whole gallery. After click on the image below SSG won’t activate and the image will open normally into a new tab of a browser.</p>
 
 
-<figure class="wp-block-image"><a target="_blank" class="nossg" href="wp_files/classes.png"><img src="wp_files/classes.png" alt="How to enter nossg and other classes into a Gallery and Image settings" class="wp-image-284" ></a><figcaption>How to enter nossg and other classes into a Gallery and Image settings.<br> This image will open into a new tab of a browser because of <strong>nossg </strong>class</figcaption></figure>
+<figure class="wp-block-image"><a target="_blank" class="nossg" href="wp_files/classes.png"><img src="wp_files/classes.png" alt="How to enter nossg and other classes into a Gallery and Image settings" class="wp-image-284" ></a>
+	<figcaption>How to enter nossg and other classes into a Gallery and Image settings.<br> This image will open into a new tab of a browser because of <strong>nossg </strong>class</figcaption></figure>
 <br>
 <p>The <strong>fs</strong> class opens image into full screen. Images inside a galleries open into full screen by default, but you can change it in the SSG settings.</p>
 
-<p>An image with <strong>gossg </strong>class will show in the gallery only if a user clicks on it. If a user activates Story Show Gallery through another image, images with gossg class won’t be in the gallery.</p>
+<h3>Visual theme classes</h3>
+<p>
+SSG offers four visual themes and each one has its own class:</br>
+light theme ⇒ class: <strong>ssglight</strong>, dim theme ⇒ class: <strong>ssgdim</strong>, dark theme ⇒ class: <strong>ssgdark</strong> and black theme ⇒ class: <strong>ssgblack</strong>.
+</p>
+<p>
+With theme classes you can set a visual theme individually for each gallery or image. In the SSG configuration you can set the global visual theme. Dark theme is default.
+</p>
 
-<figure class="wp-block-image"><a class="fs gossg ssglight" href="../img/story-show-gallery-logo.jpg" target="_blank" rel="noreferrer noopener"><img src="../img/story-show-gallery-logo.jpg" alt="" class="wp-image-170"></a><figcaption>This image has <strong>gossg </strong>, <strong>fs</strong> and <strong>ssglight</strong> class.</figcaption></figure>
 
-<p>If you click on the image with SSG logo, four images will show in the full screen  gallery. If you click on some thumbnail of the gallery below, only three images will show in the full screen gallery. This happens because of the gossg class assigned to the single image.</p>
+<h3>Gossg class and separate galleries</h3>
+
+<p>An image with <strong>gossg </strong>class will show in the gallery lightbox only if a user clicks on it. If a user activates Story Show Gallery through another image, images with gossg class won’t be in the gallery lightbox.</p>
+
+<figure class="wp-block-image"><a class="fs gossg ssglight" href="../img/story-show-gallery-responsive-modes-fullscreen.jpg" ssgid="1" ssg="1" ssgsid="1"><img src="../img/story-show-gallery-responsive-modes-fullscreen.jpg" alt="" class="wp-image-170"></a>
+</figure>
+<figure class="wp-block-image"><a class="fs gossg ssglight" href="../img/story-show-gallery-logo.jpg" target="_blank" rel="noreferrer noopener"><img src="../img/story-show-gallery-logo.jpg" alt="" class="wp-image-170"></a>
+	<figcaption>Both images have <strong>gossg </strong>, <strong>fs</strong> and <strong>ssglight</strong> class. Because of gossg class only one of them can show in the gallery lightbox.</figcaption></figure>
+
+<p>By default, SSG lightbox shows all images from a post, unless you limit it by classes. So if you click on the image with display sizes or SSG logo, 1 + 3 images will show in the gallery lightbox. 
+	If you click on some thumbnail of the gallery below, only three images will show in the gallery lightbox. This happens because of the gossg class assigned to both single images.</p>
 
 
 <ul class="wp-block-gallery ssglight columns-3 is-cropped">
 	<li class="blocks-gallery-item"><figure><a href="../photos/on-the-hook.jpg" class="fs"><img src="thumbs/on-the-hook.jpg" alt="I couldn&#39;t believe my eyes. She just climbed up and hanged on the hook." data-id="163" class="wp-image-163" ></a></figure></li>
 	<li class="blocks-gallery-item"><figure><a href="../photos/its-time.jpg" class="fs"><img src="thumbs/its-time.jpg" alt="It&#39;s time! For a photo shoot of course." data-id="162" class="wp-image-162" ></a></figure></li>
 	<li class="blocks-gallery-item"><figure><a href="../photos/fifth-element.jpg" class="fs"><img src="thumbs/fifth-element.jpg" alt="Inspired by The Fifth Element - cult sci-fi movie with Bruce Willis and Milla Jovovich" data-id="164" class="wp-image-164"></a></figure></li>
+	<em>This three image gallery has the ssglight class for light theme.</em>
 </ul>
 
-<p>⇧ This three image gallery has ssglight class for light theme.</p>
+<p>And finally there is the <strong>ssg</strong> class. If you set this class to some gallery, it will be separated from individual images and other galleries. SSG class creates isolated gallery, only photos from that gallery will show in the lightbox.</p>
 
 
-<h3>Visual theme classes</h3>
-<p>
-SSG offers four visual themes and each has its own class, which you can enter into CSS class option of a gallery or image link.</br>
-light theme ⇒ class: <strong>ssglight</strong>, dim theme ⇒ class: <strong>ssgdim</strong>, dark theme ⇒ class: <strong>ssgdark</strong> and black theme ⇒ class: <strong>ssgblack</strong>.
-</p>
-<p>
-With theme classes you can set a visual theme individually for each gallery or image. In the SSG configuration you can set the global visual theme.
-</p>
-<p>Dark theme is default.</p>
+<p>If you set <strong>Separate galleries</strong> option in the settings, all galleries become separated.</p>
+
+
 
 
 

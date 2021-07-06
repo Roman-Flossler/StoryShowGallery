@@ -72,3 +72,5 @@ SSG.cfg.landscapeHint = 'photos look better in landscape mode <span>😉</span>'
 
 // URL of the HTML file to load behind the gallery (usually a signpost to other galleries). Set to null if you don't want it.
 SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.html';   // More info about signpost is at https://ssg.flor.cz/
+
+//SSG.cfg.separateWpGalleries = true;
