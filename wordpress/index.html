@@ -303,11 +303,16 @@
 	<p>You can control each gallery or image individually by CSS classes. Thera are 8 control classes, four of them are for visual themes.</p>
 
 		
-<p>With <strong>nossg</strong> class you can selectively deactivate Story Show Gallery for some image or whole gallery. After click on the image below SSG won’t activate and the image will open normally into a new tab of a browser.</p>
+<p>With <strong>nossg</strong> class you can selectively deactivate Story Show Gallery for some image or whole gallery. 
+	After click on the image below SSG won’t activate and the image will open normally into a new tab of a browser.</p>
+
+<p>
+<strong style="color: #D15461;">Warning:</strong> When you want to enter class for individual image, you have to enter it into image link settings. It is not class for the image itself, but for its link:
+</p>
 
 
 <figure class="wp-block-image"><a target="_blank" class="nossg" href="wp_files/classes.png"><img src="wp_files/classes.png" alt="How to enter nossg and other classes into a Gallery and Image settings" class="wp-image-284" ></a>
-	<figcaption>How to enter nossg and other classes into a Gallery and Image settings.<br> This image will open into a new tab of a browser because of <strong>nossg </strong>class</figcaption></figure>
+	<figcaption>This image will open into a new tab because of <strong>nossg </strong>class</figcaption></figure>
 <br>
 <p>The <strong>fs</strong> class opens image into full screen. Images inside a galleries open into full screen by default, but you can change it in the SSG settings.</p>
 
@@ -328,10 +333,13 @@ With theme classes you can set a visual theme individually for each gallery or i
 <figure class="wp-block-image"><a class="fs gossg ssglight" href="../img/story-show-gallery-responsive-modes-fullscreen.jpg" ssgid="1" ssg="1" ssgsid="1"><img src="../img/story-show-gallery-responsive-modes-fullscreen.jpg" alt="" class="wp-image-170"></a>
 </figure>
 <figure class="wp-block-image"><a class="fs gossg ssglight" href="../img/story-show-gallery-logo.jpg" target="_blank" rel="noreferrer noopener"><img src="../img/story-show-gallery-logo.jpg" alt="" class="wp-image-170"></a>
-	<figcaption>Both images have <strong>gossg </strong>, <strong>fs</strong> and <strong>ssglight</strong> class. Because of gossg class only one of them can show in the gallery lightbox.</figcaption></figure>
+	<figcaption>Both images have <strong>gossg </strong>, <strong>fs</strong> and <strong>ssglight</strong> class. Only one image can show in the gallery lightbox because of gossg class.</figcaption></figure>
 
-<p>By default, SSG lightbox shows all images from a post, unless you limit it by classes. So if you click on the image with display sizes or SSG logo, 1 + 3 images will show in the gallery lightbox. 
-	If you click on some thumbnail of the gallery below, only three images will show in the gallery lightbox. This happens because of the gossg class assigned to both single images.</p>
+<p>By default, SSG lightbox shows all images from a post (from top to bottom), unless you limit it by classes. 
+	So if you click on the image above with display sizes or SSG logo, 1 + 3 images will show in the gallery lightbox.</p>
+
+<p>If you click on some thumbnail of the gallery below, only three images will show in the gallery lightbox. 
+	This happens because of the gossg class assigned to both single images.</p>
 
 
 <ul class="wp-block-gallery ssglight columns-3 is-cropped">
