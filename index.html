@@ -19,6 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name='theme-color' content='#083f4c'>
     <title>SSG - vertical JavaScript gallery optimized for smartphones - Show a story with your photos</title>
+    <link rel="icon" type="image/png" href="https://roman-flossler.github.io/StoryShowGallery/img/favicon.png" />
+
     <meta property="og:site_name" content="Story Show Gallery"/>
     <meta property="og:title" content="Story Show Gallery"/>
     <meta property="og:url" content="https://roman-flossler.github.io/StoryShowGallery/"/>
@@ -208,7 +210,7 @@
             <code>
                     // -- inside &lt;head&gt;<br>
                     &lt;link rel="stylesheet" href="<span>https://cdn.jsdelivr.net/npm/story-show-gallery@2/dist/ssg.min.css</span>"&gt;<br><br>
-                    // SSG requires jQuery library at least in version 1.5<br>
+                    // SSG requires jQuery library at least in version 1.7<br>
                     &lt;script src="<span>https://code.jquery.com/jquery-3.5.1.min.js</span>"&gt; &lt;/script&gt;<br><br>
                     // -- before &lt;/body&gt;<br>
                     &lt;script src="<span>https://cdn.jsdelivr.net/npm/story-show-gallery@2/dist/ssg.min.js</span>"&gt; &lt;/script&gt;
@@ -555,7 +557,8 @@ iceland = [];
                     Story Show Gallery also supports text hyper&shy;links. All four follow&shy;ing pict&shy;ures will appear in separate gallery (because of .ssg class):
                 </p>
                 <p class="ssg ssglight">
-                    <a href='https://roman-flossler.github.io/StoryShowGallery/photos/massive-pink-rabbit-maneater.JPG'>&#128048; Massive pink rabbit man&#x2011;eater</a> - a text link to a photo. <br>
+                    <a href='https://roman-flossler.github.io/StoryShowGallery/photos/massive-pink-rabbit-maneater.JPG' data-caption="According to its author, this is a monument of the present. It shows the state of society.<br>The system which we have built and take care of, but we don't perceive how it is eating us slowly.">
+                        &#128048; Massive pink rabbit man&#x2011;eater</a> - a text link to a photo. <br>
                     <a data-caption="" href="https://roman-flossler.github.io/StoryShowGallery/photos/lombok-bangkang-cave.jpeg" target="_blank">Enlightment inside Bankang cave</a> - with empty data-caption<br>
                     <a href='some-nice-image.JPEG' target="_blank">	&#128279; A broken link - You will notice it before site visitors do</a><br> 
                     <a href="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-logo.jpg"></a> &lArr; <strong>an empty (invisible) link</strong> to the picture with SSG logo.
