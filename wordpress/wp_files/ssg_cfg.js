@@ -25,6 +25,12 @@ SSG.cfg.respectOtherWpGalleryPlugins = true;
 // display social share icon and menu
 SSG.cfg.socialShare = true;
 
+//display EXIF data in caption + link to EXIF listing
+SSG.cfg.showExif = true;
+
+// compact form of EXIF in caption - camera lens is shortened (it might be very long)
+SSG.cfg.showExifCompact = true;
+
 // log image views into Google Analytics - true/false. SSG supports only ga.js tracking code.
 SSG.cfg.logIntoGA = true;
 
