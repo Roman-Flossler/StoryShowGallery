@@ -550,7 +550,7 @@ iceland = [];
                     </div>
 
                     <a href='https://roman-flossler.github.io/StoryShowGallery/photos/engine-room.jpg' data-author="photo by Flor">
-                        <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_engine-room.jpg" alt="The engine room with giant steel cable winch." />
+                        <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_engine-room.jpg" alt="Engine room with giant winches." />
                     </a>
                     <a href='https://roman-flossler.github.io/StoryShowGallery/photos/hook-portrait.jpg' data-author="photo by Flor">
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_hook-portrait.jpg" alt="" /></a>
@@ -863,7 +863,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     SSG.cfg.watermarkText = window.screen.width > 933 ? '<b>ꐠ</b> Story Show Gallery' : '<b>ꐠ</b> SSG';
     SSG.cfg.watermarkFontSize = window.screen.width > 933 ? 18 : 20;
     SSG.cfg.theme = 'dim';
-    SSG.cfg.captionExif = 'trim';
+    SSG.cfg.captionExif = window.screen.width > 933 ? 'trim' : 'icon';
     
     // example of SSG events, they are part of the configuration. This example writes gallery's stats into JS console    
     var counter = 0;

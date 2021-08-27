@@ -1,7 +1,7 @@
 
 SSG.cfg.wordpressGalleryFS = true;
 SSG.cfg.respectOtherWpGalleryPlugins = true;
-SSG.cfg.captionExif = 'trim';
+SSG.cfg.captionExif = window.screen.width > 933 ? 'trim' : 'icon';
 SSG.cfg.globalAuthorCaption =  "photo by Flor" ;
 SSG.cfg.preferedCaptionLocation =  8;
 
