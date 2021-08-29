@@ -6240,6 +6240,13 @@ img.imglink:hover {
     border-bottom-style: dashed !important;
 }
 
+#SSG1 span.SSG_logo b {
+    padding-right: 4px;
+    display: inline-block;
+    transform: scaleX(1.4) !important;
+    font-weight: normal;
+    text-shadow: 0 0 2px black, 0 0 3px black, 0 0 6px black, 0 0 12px black, 0 0 18px black, 0 0 2px black, 0 0 3px black, 0 0 6px black, 0 0 12px black, 0 0 18px black;
+}
 
 
 /*
