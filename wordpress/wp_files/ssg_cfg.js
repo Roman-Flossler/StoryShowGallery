@@ -4,6 +4,7 @@ SSG.cfg.respectOtherWpGalleryPlugins = true;
 SSG.cfg.captionExif = 'trim';
 SSG.cfg.globalAuthorCaption =  "photo by Flor" ;
 SSG.cfg.preferedCaptionLocation =  8;
+SSG.cfg.onImgLoad = function(data) {  SSG.cfg.captionExif = ( data.imgName == "on-the-hook" || data.imgName == "sorvagsvatn-lake" ) ? 'icon' : 'trim'; };
 
 // Watermark - logo configuration. Enter watermark text or image URL to display it. It has to be inside quotes.
 // EXAMPLE: SSG.cfg.watermarkText = '© Mia Photo'; OR  SSG.cfg.watermarkImage = 'https://www.flor.cz/img/florcz.png';
