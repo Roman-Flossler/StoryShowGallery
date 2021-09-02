@@ -869,7 +869,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     SSG.cfg.watermarkFontSize = window.screen.width > 933 ? 18 : 20;
     SSG.cfg.theme = 'dim';
     SSG.cfg.captionExif = 'trim';
-    SSG.cfg.onImgLoad = function(data) {  SSG.cfg.captionExif = data.imgName == "on-the-hook" ? 'icon' : 'trim'; };
+    SSG.cfg.onImgLoad = function(data) { SSG.cfgFused.captionExif = data.imgName == "on-the-hook" ? 'icon' : 'trim'; };
     
     // example of SSG events, they are part of the configuration. This example writes gallery's stats into JS console    
     var counter = 0;
