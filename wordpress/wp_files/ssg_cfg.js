@@ -21,3 +21,8 @@ SSG.cfg.watermarkFontSize = window.screen.width > 933 ? 18 : 20;
 SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.html';   // More info about signpost is at https://ssg.flor.cz/
 
 //SSG.cfg.separateWpGalleries = true;
+
+
+if (location.hash == '#model') {
+    SSG.run( { imgs: [ { href: 'https://www.flor.cz/_imgs/model.jpg', alt: '', author: '' } ], imgsPos:'start', initImgID: 4 });
+}
