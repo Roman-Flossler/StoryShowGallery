@@ -24,5 +24,5 @@ SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.htm
 
 
 if (location.hash == '#model') {
-    SSG.run( { imgs: [ { href: '../photos/model.jpg', alt: '', author: '' } ], imgsPos:'start', initImgID: 4 });
+    SSG.run( { imgs: [ { href: '../photos/model.jpg', alt: '', author: '' } ], imgsPos:'start', initImgID: 4, fsa:true });
 }
