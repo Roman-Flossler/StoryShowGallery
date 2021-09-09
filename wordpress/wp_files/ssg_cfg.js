@@ -25,5 +25,5 @@ SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.htm
 
 if (location.hash == '#model') {
     jQuery('a[href*="faroe-islands-map"]').addClass('nossg');
-    SSG.run( { imgs: [ { href: '../photos/model.jpg', alt: '', author: '' } ], imgsPos:'start', initImgID: 3, fsa:true });
+    SSG.run( { imgs: [ { href: '../photos/model.jpg', alt: '', author: '' } ], imgsPos:'start', initImgID: 3, fsa:true, cfg: { theme:'dim'} });
 }
