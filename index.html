@@ -267,19 +267,25 @@
             <h2>SSG files and minifying</h2>
             <!-- _____________________________________ -->
 
-            <p>Story Show Gallery of six files placed in the <strong>src</strong> directory:</p>
+            <p>Story Show Gallery consists of three files placed in the <strong>src</strong> directory:</p>
                 <ul>
-                    <li><strong>ssg.js</strong> - all Javascript - jQuery code. At the begining is default configuration and language localization.</li>
+                    <li><strong>ssg.js</strong> - all Javascript - jQuery code. At the begining is default confi&shy;guration and language localization.</li>
                     <li><strong>ssg.css</strong> - the gallery styles, includes icons and cursor</li>
                     <li><strong>ssg-loaded.html</strong> (optional) - a html file to load behind the last photo, typically a signpost to other galleries. 
                         Edit it to your liking.
                     </li>
-                    <li><strong>ssg.esm.js</strong> - ESM module of Story Show Gallery, it can be imported.</li>
-                    <li><strong>react.js</strong> - StoryShowGallery component that can be used in React app.</li>
+                </ul>
+                <br>
+            <p>There are other three files which are for React: </p>
+
+                <ul>
+                    <li><strong>ssg.esm.js</strong> - ssg.js in the form of ESM module, it can be imported.</li>
+                    <li><strong>react.js</strong> - StoryShowGallery component for use in React app.</li>
                     <li><strong>react-exifr.js</strong> - same as the react.js, in addition it imports Exifr library to read EXIF data.</li>
 
                 </ul>            
             <p>
+                <br>
             There are minified files in the <strong>dist</strong> directory ready for deployment on your website. 
             If you modify source files, you may want to minify the result. Use existing npm script:
             </p>
