@@ -889,13 +889,13 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
                     jQuery('#squareg').append('<a href="https://roman-flossler.github.io/StoryShowGallery/photos/fifth-element.jpg" class="third" data-author="photo by Flor">'+
                         '<img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_fifth-element.jpg" alt="Inspired by The Fifth Element' + 
                         ' - cult sci-fi movie with Bruce Willis and Milla Jovovich" /></a>')
-                    }, 3000);
+                    }, 3333);
                 showStarted = true;
             }
 
-            jQuery('.gallery img').on('load', function() {
+            jQuery('.gallery img, .topimg.wider img').on('load', function() {
                 imgCount++;
-                if (imgCount==6) {
+                if (imgCount==7) {
                     initShow();
                 }
             });
