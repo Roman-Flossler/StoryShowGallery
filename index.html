@@ -867,6 +867,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
             }
             var countShow = 0;
             var imgCount = 0;
+            var showStarted = false;
             function showHover() {
                 countShow = (countShow + 1) % 10;
                 jQuery('.gallery > a:nth-child(' +  countShow  + ')').toggleClass('show');
@@ -881,33 +882,28 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
             }
 
             function initShow() {
+                if (showStarted) return;
                 show = setInterval( showHover, 444);
                 jQuery('.gallery > a').on('mouseover', stopShow );
-            }
-
-            function addImageAfter() {
                 window.setTimeout( function() {
                     jQuery('#squareg').append('<a href="https://roman-flossler.github.io/StoryShowGallery/photos/fifth-element.jpg" class="third" data-author="photo by Flor">'+
                         '<img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_fifth-element.jpg" alt="Inspired by The Fifth Element' + 
                         ' - cult sci-fi movie with Bruce Willis and Milla Jovovich" /></a>')
                     }, 3000);
+                showStarted = true;
             }
 
             jQuery('.gallery img').on('load', function() {
                 imgCount++;
                 if (imgCount==6) {
                     initShow();
-                    addImageAfter()
                 }
             });
             
-            // if image is already loaded (offsetHeight > 1) on load event doesn't fire
-            jQuery( document ).ready( function () {            
-                if ( document.getElementById('checker').offsetHeight > 1 ) {
-                    initShow();
-                    addImageAfter()
-                }
-            });
+            // if image is already loaded (offsetHeight > 1), img onload event doesn't fire
+            if ( document.getElementById('checker').offsetHeight > 1 ) {
+                initShow();
+            }
 
             function switchParam(param, elem, values) {
                 var index;
