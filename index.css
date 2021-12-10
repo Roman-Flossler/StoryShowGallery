@@ -180,6 +180,19 @@ a {
     text-decoration-style: double !important;
 }
 
+h2 .react {
+    height: 60px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    filter: brightness(0.66);
+}
+
+li .react {
+    height: 33px;
+    margin-bottom: -11px;
+    filter: brightness(0.66);
+}
+
 .seegal {
     display: none;    
 }

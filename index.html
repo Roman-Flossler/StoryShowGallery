@@ -527,7 +527,7 @@ iceland = [];
         
         <a name='js-module'></a>
 
-        <h2>StoryShowGallery for React ⚛</h2>
+        <h2>StoryShowGallery for React <img class='react' src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"></h2>
         <!-- _____________________________________ -->          
         
         <p>Story Show Gallery can also work as a React Component. How to use it: 
@@ -638,7 +638,7 @@ iceland = [];
                 <li><a href="#deeplinking">Deep linking, scrolling</a></li>                
                 <li><a href="#ssg-run">SSG.run & SSG.restart method</a></li>
                 <li><a href="#js-module">StoryShowGallery for React</a>
-                    <sub style="font-size: 188%; color: #00507e; line-height: 0.8em; vertical-align: middle;">⚛</sub></li>
+                    <img class='react' src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"></li>
                 <li class="mobileonli"><a href="#themes">🎨 Visual themes</a></li>
             </ol>
 
@@ -901,9 +901,11 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
             });
             
             // if image is already loaded (offsetHeight > 1), img onload event doesn't fire
-            if ( document.getElementById('checker').offsetHeight > 1 ) {
-                initShow();
-            }
+            jQuery( document ).ready( function () {
+                if ( document.getElementById('checker').offsetHeight > 1 ) {
+                    initShow();
+                }
+            });
 
             function switchParam(param, elem, values) {
                 var index;
