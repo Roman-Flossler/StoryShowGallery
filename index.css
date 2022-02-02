@@ -180,15 +180,14 @@ a {
     text-decoration-style: double !important;
 }
 
-h2 .react {
-    margin-bottom: -0.2em;
+h2 .react {    
     filter: brightness(0.66);
-    height: 1em;
+    height: 0.8em;
 }
 
 li .react {
-    height: 33px;
-    margin-bottom: -11px;
+    height: 1.33em;
+    margin-bottom: -0.3em;
     filter: brightness(0.66);
 }
 
