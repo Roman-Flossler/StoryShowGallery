@@ -13,7 +13,7 @@ SSG.cfg.watermarkImage = '';  // watermark image URL
 SSG.cfg.watermarkOffsetX = 2; // watermark horizontal offset from left in percents
 SSG.cfg.watermarkOffsetY = 2; // watermark vertical offset from bottom in percent of display size
 SSG.cfg.watermarkOpacity = 0.42; // opacity
-SSG.cfg.imgBorderRadius = "0.25";    
+SSG.cfg.imgBorderRadius = "0.2";
 
 SSG.cfg.watermarkText = window.screen.width > 933 ? '<b>ꐠ</b> Story Show Gallery' : '<b>ꐠ</b> SSG';
 SSG.cfg.watermarkFontSize = window.screen.width > 933 ? 18 : 20;
