@@ -28,3 +28,22 @@ if (location.hash == '#model') {
     jQuery('a[href*="faroe-islands-map"]').addClass('nossg');
     SSG.run( { imgs: [ { href: '../photos/model.jpg', alt: '', author: '' } ], imgsPos:'start', initImgID: 3, fsa:true, cfg: { theme:'dim'} });
 }
+
+function displayBorder(checkbox) {
+    if(checkbox.checked) {
+        SSG.cfg.imgBorderWidthX = 24;
+        SSG.cfg.imgBorderWidthY = 24;
+        SSG.cfg.imgBorderColor = "#3A4345";
+        SSG.cfg.watermarkOffsetY = -15.5;
+        SSG.cfg.watermarkOffsetX = 3;
+        SSG.cfg.imgBorderLightFx = true; 
+        setTimeout(function(){ SSG.run({ initImgID: 5, fs: true}) }, 888);
+    } else {
+        SSG.cfg.imgBorderWidthX = 1;
+        SSG.cfg.imgBorderWidthY = 1;
+        SSG.cfg.imgBorderColor = "";
+        SSG.cfg.watermarkOffsetY = 0.6;
+        SSG.cfg.watermarkOffsetX = 1.8;
+        SSG.cfg.imgBorderLightFx = false;
+    }
+}
