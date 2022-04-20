@@ -34,7 +34,7 @@ function displayBorder(checkbox) {
         SSG.cfg.imgBorderWidthX = 24;
         SSG.cfg.imgBorderWidthY = 24;
         SSG.cfg.imgBorderColor = "#3A4345";
-        SSG.cfg.watermarkOffsetY = -15.5;
+        SSG.cfg.watermarkOffsetY = -14.5;
         SSG.cfg.watermarkOffsetX = 3;
         SSG.cfg.imgBorderLightFx = true; 
         setTimeout(function(){ SSG.run({ initImgID: 5, fs: true}) }, 888);
