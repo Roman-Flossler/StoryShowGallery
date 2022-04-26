@@ -15,8 +15,8 @@ SSG.cfg.watermarkOffsetY = 2; // watermark vertical offset from bottom in percen
 SSG.cfg.watermarkOpacity = 0.42; // opacity
 SSG.cfg.imgBorderRadius = "0.2";
 
-SSG.cfg.watermarkText = window.screen.width > 933 ? '<b>ꐠ</b> Story Show Gallery' : '<b>ꐠ</b> SSG';
-SSG.cfg.watermarkFontSize = window.screen.width > 933 ? 18 : 20;
+SSG.cfg.watermarkText = '<b>ꐠ</b> Story Show Gallery';
+SSG.cfg.watermarkFontSize = 19;
 
 // URL of the HTML file to load behind the gallery (usually a signpost to other galleries). Set to null if you don't want it.
 SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.html';   // More info about signpost is at https://ssg.flor.cz/
@@ -34,7 +34,7 @@ function displayBorder(checkbox) {
         SSG.cfg.imgBorderWidthX = 24;
         SSG.cfg.imgBorderWidthY = 24;
         SSG.cfg.imgBorderColor = "#3A4345";
-        SSG.cfg.watermarkOffsetY = -14.5;
+        SSG.cfg.watermarkOffsetY = -15;
         SSG.cfg.watermarkOffsetX = 3;
         SSG.cfg.imgBorderLightFx = true; 
         setTimeout(function(){ SSG.run({ initImgID: 5, fs: true}) }, 888);
