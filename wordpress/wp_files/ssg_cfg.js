@@ -11,7 +11,7 @@ SSG.cfg.onImgLoad = function(data) {  SSG.cfgFused.captionExif = ( data.imgName 
 SSG.cfg.watermarkWidth = 147; // watermark width in pixels, it is downsized on smaller screens.
 SSG.cfg.watermarkImage = '';  // watermark image URL
 SSG.cfg.watermarkOffsetX = 2; // watermark horizontal offset from left in percents
-SSG.cfg.watermarkOffsetY = 2; // watermark vertical offset from bottom in percent of display size
+SSG.cfg.watermarkOffsetY = 1;
 SSG.cfg.watermarkOpacity = 0.42; // opacity
 SSG.cfg.imgBorderRadius = "0.2";
 
@@ -31,10 +31,11 @@ if (location.hash == '#model') {
 
 function displayBorder(checkbox) {
     if(checkbox.checked) {
-        SSG.cfg.imgBorderWidthX = 24;
-        SSG.cfg.imgBorderWidthY = 24;
-        SSG.cfg.imgBorderColor = "#3A4345";
-        SSG.cfg.watermarkOffsetY = -15;
+        SSG.cfg.imgBorderWidthX = 28;
+        SSG.cfg.imgBorderWidthY = 20;
+        SSG.cfg.imgBorderColor = "#bbbbbb";
+        SSG.cfg.watermarkOffsetY = -23;
+        //SSG.cfg.watermarkFontColor  = "blue";
         SSG.cfg.watermarkOffsetX = 3;
         SSG.cfg.imgBorderLightFx = true; 
         setTimeout(function(){ SSG.run({ initImgID: 5, fs: true}) }, 888);
