@@ -16,7 +16,7 @@ SSG.cfg.watermarkOpacity = 0.42; // opacity
 SSG.cfg.imgBorderRadius = "0.2";
 
 SSG.cfg.watermarkText = '<b>ꐠ</b> Story Show Gallery';
-SSG.cfg.watermarkFontSize = 19;
+SSG.cfg.watermarkFontSize = 18;
 
 // URL of the HTML file to load behind the gallery (usually a signpost to other galleries). Set to null if you don't want it.
 SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/play.html';   // More info about signpost is at https://ssg.flor.cz/
@@ -34,7 +34,7 @@ function displayBorder(checkbox) {
         SSG.cfg.imgBorderWidthX = 28;
         SSG.cfg.imgBorderWidthY = 20;
         SSG.cfg.imgBorderColor = "#bbbbbb";
-        SSG.cfg.watermarkOffsetY = -23;
+        SSG.cfg.watermarkOffsetY = -26;
         //SSG.cfg.watermarkFontColor  = "blue";
         SSG.cfg.watermarkOffsetX = 3;
         SSG.cfg.imgBorderLightFx = true; 
