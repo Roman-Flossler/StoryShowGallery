@@ -36,8 +36,10 @@ function displayBorder(checkbox) {
         SSG.cfg.imgBorderColor = "#cfcfcf";
         SSG.cfg.imgOutlineColor = "#ede89b";
         SSG.cfg.watermarkOffsetY = -23;
+        SSG.cfg.watermarkText = "© Story Show Gallery";
+        SSG.cfg.watermarkFontColor = "#26174a";
         SSG.cfg.watermarkOffsetX = 3;
-        SSG.cfg.watermarkOpacity = 0.5;
+        SSG.cfg.watermarkOpacity = 1;
         SSG.cfg.imgBorderLightFx = true; 
         setTimeout(function(){ SSG.run({ initImgID: 5, fs: true}) }, 888);
     } else {
@@ -46,6 +48,8 @@ function displayBorder(checkbox) {
         SSG.cfg.imgBorderWidthY = 1;
         SSG.cfg.imgBorderColor = "";
         SSG.cfg.imgOutlineColor = "";
+        SSG.cfg.watermarkText = "<b>ꐠ</b> Story Show Gallery";
+        SSG.cfg.watermarkFontColor = "";
         SSG.cfg.watermarkOffsetY = 0.6;
         SSG.cfg.watermarkOffsetX = 1.8;
         SSG.cfg.imgBorderLightFx = false;
