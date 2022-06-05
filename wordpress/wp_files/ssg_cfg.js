@@ -31,18 +31,21 @@ if (location.hash == '#model') {
 
 function displayBorder(checkbox) {
     if(checkbox.checked) {
-        SSG.cfg.imgBorderWidthX = 28;
-        SSG.cfg.imgBorderWidthY = 20;
-        SSG.cfg.imgBorderColor = "#bbbbbb";
-        SSG.cfg.watermarkOffsetY = -26;
-        //SSG.cfg.watermarkFontColor  = "blue";
+        SSG.cfg.imgBorderWidthX = 24;
+        SSG.cfg.imgBorderWidthY = 24;
+        SSG.cfg.imgBorderColor = "#cfcfcf";
+        SSG.cfg.imgOutlineColor = "#ede89b";
+        SSG.cfg.watermarkOffsetY = -23;
         SSG.cfg.watermarkOffsetX = 3;
+        SSG.cfg.watermarkOpacity = 0.5;
         SSG.cfg.imgBorderLightFx = true; 
         setTimeout(function(){ SSG.run({ initImgID: 5, fs: true}) }, 888);
     } else {
+        SSG.cfg.watermarkOpacity = 0.42;
         SSG.cfg.imgBorderWidthX = 1;
         SSG.cfg.imgBorderWidthY = 1;
         SSG.cfg.imgBorderColor = "";
+        SSG.cfg.imgOutlineColor = "";
         SSG.cfg.watermarkOffsetY = 0.6;
         SSG.cfg.watermarkOffsetX = 1.8;
         SSG.cfg.imgBorderLightFx = false;
