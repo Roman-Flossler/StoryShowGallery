@@ -77,7 +77,7 @@
             </div>
 
             <header>
-            <h1>Story Show Gallery</h1>            
+            <h1>Story Show Gallery</h1>
                 <em class="subheading">Javascript & React vertical gallery created by Roman Flössler</em>
                 <div id="badges">
                     <a target="_blank" href="https://www.jsdelivr.com/package/npm/story-show-gallery" data-clipboard-text="[![](https://data.jsdelivr.com/v1/package/npm/story-show-gallery/badge?style=rounded)](https://www.jsdelivr.com/package/npm/story-show-gallery)" data-original-title="" title=""><img src="https://data.jsdelivr.com/v1/package/npm/story-show-gallery/badge?style=rounded"></a>
@@ -561,23 +561,23 @@ iceland = [];
 
         <p>
             You can import story-show-gallery into the root component (app.js or _app.js in the case of Next.js) so that the whole application can use it. 
-            Or just import it into any component/page where you want an image gallery.
+            Or just import it into any component / page where you want an image gallery.
         </p>
 
-        <p>There is a sample implementation ( <strong>SsgReactExample.js</strong> ) in the example directory of the story-show-gallery npm package.</p>
+        <p>There is a sample imple&shy;mentation ( <strong>SsgReact&shy;Example.js</strong> ) in the example directory of the story-show-gallery npm package.</p>
 
         <p>
-            Story Show Gallery for React works the same way as it is described above. Just add the <strong>StoryShowGallery</strong> component into you React app 
+            Story Show Gallery for React works the same way as it is described above. Just add the <strong>Story&shy;Show&shy;Gallery</strong> component into you React app 
             and every image hyperlink on the entire page will be assigned an onclick function, which opens image into the gallery. 
             Image hyperlinks can be controlled by CSS classes, as it is described above. 
         </p>
         <p> If you don't want to use image hyperlinks in your code, use the <strong>SSG.run</strong> function with an array that defines urls and captions of photos. 
-            SSG.run para&shy;meters and its use is described above. SSG.run parameters are local - only for the current gallery run.
+            SSG.run para&shy;meters and its use are described above. SSG.run parameters are local - only for the current gallery run.
         </p>
         <p>
-            Global parameters go into the <strong>&lt;StoryShowGallery/&gt;</strong> component, they are common to all SSG.run and to galleries 
+            Global parameters go into the <strong>&lt;Story&shy;Show&shy;Gallery/&gt;</strong> component, they are common to all SSG.run and to galleries 
             activated by image links. Global para&shy;meters can be overridden by ones within the <strong>SSG.run</strong> function or by gallery classes.
-            The <strong>&lt;StoryShowGallery/&gt;</strong> com&shy;po&shy;nent has one config parameter that contains the configuration object with all settings. 
+            The <strong>&lt;Story&shy;Show&shy;Gallery/&gt;</strong> compo&shy;nent has one config parameter that contains the configuration object with all settings. 
             <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible');">List of all possible settings</a> - use just param name without SSG.cfg prefix.
         </p>
 
@@ -589,7 +589,7 @@ iceland = [];
         </p>
             <code> 
             <em>// setting of observing DOM:</em><br>
-           &lt;StoryShowGallery config={{ theme: 'light', observeDOM: true }} /&gt;
+           &lt;Story&shy;Show&shy;Gallery config={{ theme: 'light', observeDOM: true }} /&gt;
             </code> 
         
             <br style="clear: both" />
@@ -1010,7 +1010,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/exifr@7/dist/lite.umd.js"> </script>
-    <script src="dist/ssg.min.js"></script>
+    <script src="src/ssg.js"></script>
     <script>
     var isMobileScreen = window.matchMedia( '(max-width: 933px) and (orientation: landscape), (max-width: 500px) and (orientation: portrait) ' ).matches;
     SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/dist/ssg-loaded.html';
