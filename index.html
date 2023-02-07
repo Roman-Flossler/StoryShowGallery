@@ -577,8 +577,8 @@ iceland = [];
         <p>
             Global parameters go into the <strong>&lt;Story&shy;Show&shy;Gallery/&gt;</strong> component, they are common to all SSG.run and to galleries 
             activated by image links. Global para&shy;meters can be overridden by ones within the <strong>SSG.run</strong> function or by gallery classes.
-            The <strong>&lt;Story&shy;Show&shy;Gallery/&gt;</strong> compo&shy;nent has one config parameter that contains the configuration object with all settings. 
-            <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible');">List of all possible settings</a> - use just param name without SSG.cfg prefix.
+            The <strong>&lt;Story&shy;Show&shy;Gallery/&gt;</strong> compo&shy;nent has one config prop that contains the configuration object with all parameters. 
+            <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible');">List of all possible para&shy;meters</a> - use just param name without SSG.cfg prefix.
         </p>
 
         <p>
@@ -1010,7 +1010,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/exifr@7/dist/lite.umd.js"> </script>
-    <script src="src/ssg.js"></script>
+    <script src="dist/ssg.min.js"></script>
     <script>
     var isMobileScreen = window.matchMedia( '(max-width: 933px) and (orientation: landscape), (max-width: 500px) and (orientation: portrait) ' ).matches;
     SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/dist/ssg-loaded.html';
