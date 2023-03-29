@@ -648,12 +648,7 @@ iceland = [];
                     <a class="color" style="background: #161616; color: #b1b1b1" onclick="SSG.run({ initImgID: 6, fs: true, cfg: { theme: 'dark' }})">Dark</a>
                     <a class="color" style="background: black;  color: #b1b1b1" onclick="SSG.run({ initImgID: 6, fs: true, cfg: { theme: 'black' }})">Black</a>
                     <a class="color" style="background: #f1f1f1; color: #333333;" onclick="SSG.run({ initImgID: 6, fs: true, cfg: { watermarkOpacity: 0.5, theme: 'light' }})">Light</a>
-                </p>                
-
-                <p>
-                &nbsp;⭕ <a href="#" style="text-decoration-style: wavy; text-decoration-color: #777777; text-underline-offset: 2px;"
-                onclick="SSG.run( { initImgID:8, fs:true, cfg: { imgBorderWidthX: 24, imgBorderWidthY:0, imgBorderColor:'black', imgOutlineColor:'#891b1b', imgBorderRadius:50, imgBorderLightFx: true, watermarkOffsetX:50, imgBorderShadow: false, watermarkOffsetY:-28, watermarkFontColor: 'white', watermarkOpacity:0.88, watermarkText: '', watermarkImage: 'https://www.flor.cz/img/florcz.png' }})">
-                    Extreme example of image border, radius and watermark settings</a></p>
+                </p>
                 
                 <h2 style="margin-top: 2em;">Gallery with text links</h2>
                 <p>
@@ -667,6 +662,11 @@ iceland = [];
                     <a href='some-nice-image.JPEG' target="_blank">	&#128279; A broken link - You will notice it before site visitors do</a><br> 
                     <a href="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-logo.jpg"></a> &lArr; <strong>an empty (invisible) link</strong> to the picture with SSG logo.
                 </p>
+
+                <p style="margin-top: 3rem;">
+                    &nbsp;⭕ <a href="#" style="text-decoration-style: wavy; text-decoration-color: #777777; text-underline-offset: 2px;"
+                    onclick="SSG.run( { initImgID:8, fs:true, cfg: { imgBorderWidthX: 24, imgBorderWidthY:0, imgBorderColor:'black', imgOutlineColor:'#891b1b', imgBorderRadius:50, imgBorderLightFx: true, watermarkOffsetX:50, imgBorderShadow: false, watermarkOffsetY:-28, watermarkFontColor: 'white', watermarkOpacity:0.88, watermarkText: '', watermarkImage: 'https://www.flor.cz/img/florcz.png' }})">
+                        Extreme example of image border, radius and watermark settings</a></p>
             </div>
 
             <ol class="content">
@@ -897,7 +897,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
                 });            
 
             function calcTop () {
-                jQuery('.secol').css({'top': - jQuery('#before-menu').outerHeight(true) - 33 });
+                jQuery('.secol').css({'top': - jQuery('#before-menu').outerHeight(true) - 44});
             }
 
             function setColorMode () {
