@@ -559,7 +559,8 @@ ul li {
 }
 
 .topimg.wider {
-    overflow: visible;    
+    overflow: visible;
+    overflow-x: clip;   
 }
 
 .topimg.wider:after {
