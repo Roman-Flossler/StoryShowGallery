@@ -278,8 +278,12 @@
 
             <a name='layout'></a>
             <h2>CSS layout for thumbnails</h2>
-            <p>Basic thumbnail's layout can be created via CSS quite easily. If you want something more sophisticated, you can use <strong>Grid Overflow</strong>. 
-                It is fully respo&shy;nsive and offers the same thumbnails 3D efect as can be seen on this page.
+            <p>The basic CSS thumbnails layout can be quite easily created using CSS. If you want something more sophisticated, you can use <strong>Grid Overflow</strong>. 
+                It is fully respon&shy;sive and offers the same 3D effect for thumbnails as can be seen on this page.
+            </p>
+
+            <p>
+                Grid Overflow creates responsive grid, where grid items can be given vertigo, panorama or VIP class to set their overflow into the next cell.
             </p>
 
             <a href="https://raw.githubusercontent.com/Roman-Flossler/Grid-Overflow/main/gridOverflow.jpg" >
@@ -290,7 +294,7 @@
             <code>                
                 &lt;link rel="stylesheet" href="<span>https://cdn.jsdelivr.net/npm/story-show-gallery@3/dist/GridOverflow3D.min.css</span>"&gt;
             </code>
-            <p>To use Grid Overflow, simply add the Grid Overflow classes to the parent gallery tag and to the thumbnails. A tutorial is available at 
+            <p>To use Grid Overflow, simply add the Grid Overflow classes to the parent gallery tag and to the thumbnails. Short implementation tutorial is available at 
                 <a href="https://github.com/Roman-Flossler/Grid-Overflow" target="_blank">github.com/Roman-Flossler/Grid-Overflow</a>
 
             </p>
@@ -652,7 +656,7 @@ iceland = [];
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_refreshment.jpg" alt="" />
                     </a>
 
-                    <span><a href='#layout' target="_blank">&nbsp;CSS layout for thumbnails with 3D effect&nbsp;</a></span>
+                    <span><a href='#layout'>&nbsp;CSS layout for thumbnails with 3D effect&nbsp;</a></span>
 
                     <div class="topimg">
                         <a href="https://roman-flossler.github.io/StoryShowGallery/photos/in-the-center.jpg">
@@ -928,7 +932,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
                 });            
 
             function calcTop () {
-                jQuery('.secol').css({'top': - jQuery('#before-menu').outerHeight(true) - 44});
+                jQuery('.secol').css({'top': - jQuery('#before-menu').outerHeight(true) - 64});
             }
 
             function setColorMode () {
