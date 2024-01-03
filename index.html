@@ -38,8 +38,8 @@
     <meta itemprop="image" content="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-share.jpg"/>
     
     <link rel='stylesheet' href='index.css' type='text/css' media='all' />
-    <link rel="stylesheet" href="dist/ssg.min.css" type="text/css" media="all">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"> </script>
+    <link rel="stylesheet" href="src/ssg.css" type="text/css" media="all">
+    <script src="https://code.jquery.com/jquery-1.7.min.js" ></script>
     <script>
         (window.jQuery || document.write('<script src="jQuery/jquery36.min.js"><\/script>'));
     </script>
@@ -334,8 +334,8 @@
             <ol class="text">
                 <li>Add Exifr library as it is shown above.</li>
                 <li>By default EXIF is disabled. Set <a class="showgal" onclick="jQuery('#bigcode').toggleClass('visible')">SSG.cfg.captionExif</a> option to enable it.</li>
-                <li>Image files has to be on the same domain as website, otherwise reading of EXIF data is blocked by CORS policy.</li>
-            </ol>        
+                <li>Image files has to be on the same domain as website, otherwise reading of EXIF data is blocked by CORS policy.</li>                
+            </ol>
 
             <p>In case of manual lens, you can fill blank EXIF values with default ones. Use the SSG.cfg.fillExifBlanks option.</p>                
                 <a href="https://roman-flossler.github.io/StoryShowGallery/photos/lukomir.jpg" class="fs">Bosnia landscape taken with Samyang manual lens</a>
@@ -421,7 +421,7 @@
                 behaves the same way as if you clicked on the hyperlink <u>SSG has 4 visual themes</u> under the heading <i>Visual settings</i>.
                 <br>                 
                  <a href="https://roman-flossler.github.io/StoryShowGallery/photos/massive-pink-rabbit-maneater.JPG" class="ssglink gossg">Another ssglink example</a>
-                behaves the same way as if you clicked on the hyperlink <u>🐰 Massive pink rabbit man‑eater</u> under the heading <i>Gallery with text links</i>.
+                 behaves the same way as if you clicked on the hyperlink <u>🐰 Massive pink rabbit man‑eater</u> under the heading <i>Gallery with text links</i>.
             </p>
 
             <p>SSG offers four themes and each has its own class, which you can assign to some gallery:<br> light theme -> class: <strong>ssglight</strong>,
@@ -624,7 +624,7 @@ iceland = [];
      href: 'img/iceland-horses.jpg'     
  };
 </code>
-                
+
 <code class="active" style="white-space: pre-wrap; margin-top: -3rem;" onclick="SSG.run( { imgs: iceland, id: 'iceland', fs:true, initImgID: 0 });"> SSG.run( { <span>imgs</span>: iceland, <span>id</span>: 'iceland', <span>fs</span>:true, <span>initImgID</span>: 0 });
 </code>
                 
@@ -785,11 +785,11 @@ iceland = [];
                     <img class='react' src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"></li>
                 <li class="mobileonli"><a href="#themes">🎨 Visual themes</a></li>
                 <div class="underline" >
-                <hr />
-                <a style="margin-right: 1rem" class="showgal" onclick="jQuery('#bigcode').toggleClass('visible')">⚙️Live SSG config ⧉</a>
-                 
-                <span style="display: inline-block;">
-                Fancy&nbsp;borders:&nbsp;<input class="toggle" onclick="window.displayBorder(this)" type="checkbox">
+                    <hr />
+                    <a style="margin-right: 1rem" class="showgal" onclick="jQuery('#bigcode').toggleClass('visible')">⚙️Live SSG config ⧉</a>
+                    
+                    <span style="display: inline-block;">
+                    Fancy&nbsp;borders:&nbsp;<input class="toggle" onclick="window.displayBorder(this)" type="checkbox">
                 </div>
             </span>
             </ol>
@@ -1137,11 +1137,11 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/exifr@7/dist/lite.umd.js"> </script>
-    <script src="dist/ssg.min.js"></script>
+    <script src="src/ssg.js"></script>
     <script>
     var isMobileScreen = window.matchMedia( '(max-width: 933px) and (orientation: landscape), (max-width: 500px) and (orientation: portrait) ' ).matches;
     SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/dist/ssg-loaded.html';
-    SSG.cfg.fillExifBlanks = ['Samyang 12mm, f/2', 'Samy 12mm, f/2', '18', '12', '© Roman Flössler']
+    SSG.cfg.fillExifBlanks = ['Samyang 12mm, f/2', 'Samy 12mm, f/2', '18', '12', '© Roman Flössler']    
     SSG.cfg.observeDOM = true;
     //SSG.cfg.watermarkText = window.screen.width > 933 ? '<b>ꐠ</b> Story Show Gallery' : '<b>ꐠ</b> SSG';
     SSG.cfg.watermarkText = '<b>ꐠ</b> Story Show Gallery';
