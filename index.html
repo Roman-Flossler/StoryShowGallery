@@ -38,8 +38,8 @@
     <meta itemprop="image" content="https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-share.jpg"/>
     
     <link rel='stylesheet' href='index.css' type='text/css' media='all' />
-    <link rel="stylesheet" href="src/ssg.css" type="text/css" media="all">
-    <script src="https://code.jquery.com/jquery-1.7.min.js" ></script>
+    <link rel="stylesheet" href="dist/ssg.min.css" type="text/css" media="all">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"> </script>
     <script>
         (window.jQuery || document.write('<script src="jQuery/jquery36.min.js"><\/script>'));
     </script>
@@ -68,7 +68,7 @@
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_refreshment.jpg" onclick="SSG.run({fs:true, initImgName: ['refreshment',0] });"  alt="SSG galery" />
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_in-the-center-sq.jpg" onclick="SSG.run({fs:true, initImgName: ['in-the-center',0] });"  alt="SSG galery" />
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_engine-room.jpg" onclick="SSG.run({fs:true, initImgName: ['engine-room',0] });"  alt="SSG galery" />
-                        <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_hook-portrait.jpg" onclick="SSG.run({fs:true, initImgName: ['hook-portrait',0] });"  alt="SSG galery" />
+                        <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_engines.jpg" onclick="SSG.run({fs:true, initImgName: ['engines',0] });"  alt="SSG galery" />
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_fifth-element.jpg" onclick="SSG.run({fs:true, initImgName: ['fifth-element',0] });"  alt="SSG galery" />
                 </div>
                 
@@ -187,7 +187,7 @@
             <a onclick='SSG.run( { imgs: signpost, fs:true });' >
                 <img src="https://roman-flossler.github.io/StoryShowGallery/img/signpost.jpg" alt="signpost behind ssg" class="limg imglink darken boost">
             </a>
-            </p>            
+            </p>
             
 
             <a name='brand'></a>
@@ -732,8 +732,8 @@ iceland = [];
                     <a href='https://roman-flossler.github.io/StoryShowGallery/photos/engine-room.jpg' data-author="photo by Flor">
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_engine-room.jpg" alt="Engine room with giant winches." />
                     </a>
-                    <a href='https://roman-flossler.github.io/StoryShowGallery/photos/hook-portrait.jpg' data-author="photo by Flor">
-                        <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_hook-portrait.jpg" alt="" /></a>
+                    <a href='https://roman-flossler.github.io/StoryShowGallery/photos/engines.jpg' data-author="photo by Flor">
+                        <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_engines.jpg" alt="" /></a>
                 </section>
                 <br clear="all"/>
                 <p id="scheme">
@@ -1137,7 +1137,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/exifr@7/dist/lite.umd.js"> </script>
-    <script src="src/ssg.js"></script>
+    <script src="dist/ssg.min.js"></script>
     <script>
     var isMobileScreen = window.matchMedia( '(max-width: 933px) and (orientation: landscape), (max-width: 500px) and (orientation: portrait) ' ).matches;
     SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/dist/ssg-loaded.html';
