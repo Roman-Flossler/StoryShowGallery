@@ -874,6 +874,13 @@ SSG.cfg.sideCaptionforSmallerLandscapeImg = <em class="switchable" onclick="swit
 <span>// an author signature (or some text), which will appear in every caption. The data-author attribute overrides it.</span>
 SSG.cfg.globalAuthorCaption = <em class="switchable" onclick="switchParam('globalAuthorCaption',this, ['','author: RF'])" > "" </em><em>;</em>
 
+<span>// Centre is the default alignment of the caption text. You can set the number of characters the caption's text must have to be aligned left or right.</span>
+<span>// Use a negative number to align text to the left and a positive number to align it to the right. Align right is not implemented yet !!!</span>
+<span>//  e.g. -120 will align text to the left, if it is equal to or longer than 120 characters.</span>
+SSG.cfg.narrowCaptionsAlignThreshold = <em class="switchable" onclick="switchParam('narrowCaptionsAlignThreshold',this, [-111,-1,-50, -33])" > -111 </em><em>;</em>
+<span>// Narrow captions are side captions and bottom captions in mobile portrait mode. Wide captions are the remaining bottom captions.</span>
+SSG.cfg.wideCaptionsAlignThreshold = <em class="switchable" onclick="switchParam('wideCaptionsAlignThreshold',this, [-222, -111, -1,-50])" > -222 </em><em>;</em>
+
 <span>// Show first 3 images of a separate gallery together - e.g. third image clicked - image order will be 3,1,2,4,5,6...</span>
 SSG.cfg.showFirst3ImgsTogether = <em class="switchable" onclick="switchParam('showFirst3ImgsTogether',this)">true</em><em>;</em>
 
