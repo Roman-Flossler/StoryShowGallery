@@ -72,7 +72,7 @@
                         <img src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_fifth-element.jpg" onclick="SSG.run({fs:true, initImgName: ['fifth-element',0] });"  alt="SSG galery" />
                 </div>
                 
-                <span onclick="SSG.run({fs:true,  initImgName: ['story-show-gallery-logo',0] });"><b>&#xA420;</b> View demo gallery</span>
+                <span class="sampleGallery" onclick="SSG.run({fs:true,  initImgName: ['its-time',0] });"><b>&#xA420;</b> sample gallery</span>
                 <div id="menuicon"></div>
             </div>
 
@@ -187,7 +187,7 @@
             <a onclick='SSG.run( { imgs: signpost, fs:true });' >
                 <img src="https://roman-flossler.github.io/StoryShowGallery/img/signpost.jpg" alt="signpost behind ssg" class="limg imglink darken boost">
             </a>
-            </p>
+            </p>            
             
 
             <a name='brand'></a>
@@ -1144,7 +1144,7 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/exifr@7/dist/lite.umd.js"> </script>
-    <script src="dist/ssg.min.js"></script>
+    <script src="src/ssg.js"></script>
     <script>
     var isMobileScreen = window.matchMedia( '(max-width: 933px) and (orientation: landscape), (max-width: 500px) and (orientation: portrait) ' ).matches;
     SSG.cfg.fileToLoad = 'https://roman-flossler.github.io/StoryShowGallery/dist/ssg-loaded.html';
