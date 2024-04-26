@@ -928,6 +928,7 @@ footer {
     z-index: 10;
     background: black;
     opacity: 0.5;
+    font-size: 18px;
   }
 
   .mobileonly #menuicon::before {
@@ -1053,8 +1054,13 @@ footer {
   }
 
   #front-gallery img {
-    width: 97px;
+    width: 27vw;
     margin: 2px;
+  }
+
+  #badges {
+    margin-left: -20px;
+    text-align: center;
   }
 
   #bigcode p span {
@@ -1443,7 +1449,7 @@ footer {
 }
 
 .dark #badges img {
-  filter: brightness(0.8) contrast(1.4) saturate(0.7) hue-rotate(-22deg);
+  filter: brightness(0.8) contrast(1.4) saturate(0.6) hue-rotate(-22deg);
   box-shadow: 0 0 7px #282828;
   margin-left: 3px;
 }
