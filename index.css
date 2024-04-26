@@ -970,8 +970,8 @@ footer {
     line-height: 2.2em;
     text-decoration: none;
     cursor: pointer;
-    color: #f16161;
-    text-shadow: 0 0 8px #f16161;
+    color: #d16d6d;
+    text-shadow: 0 0 8px #d16d6d;
     background-image: url(https://roman-flossler.github.io/StoryShowGallery/img/story-show-gallery-logo.jpg);
     background-size: 99.3%;
     filter: brightness(1.2) saturate(1.8) hue-rotate(-8deg);
@@ -991,7 +991,7 @@ footer {
     white-space: nowrap;
     width: 100%;
     overflow: auto;
-    scrollbar-color: #ce2947 #0e0e0e;
+    scrollbar-color: #ab243d #0e0e0e;
     scrollbar-width: thin;
   }
 
