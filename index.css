@@ -213,7 +213,7 @@ h2 .react {
 
 #badges img {
   height: 24px;
-  filter: hue-rotate(-13deg) contrast(1.3) saturate(0.81);
+  filter: hue-rotate(-18deg) contrast(1.3) saturate(0.81);
 }
 
 li .react {
@@ -991,7 +991,7 @@ footer {
     white-space: nowrap;
     width: 100%;
     overflow: auto;
-    scrollbar-color: #ab243d #0e0e0e;
+    scrollbar-color: #183844 #0e0e0e;
     scrollbar-width: thin;
   }
 
@@ -1443,7 +1443,7 @@ footer {
 }
 
 .dark #badges img {
-  filter: brightness(0.8) contrast(1.4) saturate(0.6);
+  filter: brightness(0.8) contrast(1.4) saturate(0.7) hue-rotate(-22deg);
   box-shadow: 0 0 7px #282828;
   margin-left: 3px;
 }
