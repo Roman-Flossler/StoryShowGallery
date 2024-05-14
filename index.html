@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 
+<!--  HTML file with Story Show Gallery documentation and live demonstration of capabilities. 
+      You can view this file live at https://roman-flossler.github.io/StoryShowGallery/   -->
+
 <head>
     <!-- Google Analytics  -->
     <script>
@@ -352,14 +355,14 @@
             <h2>SSG files and minifying</h2>
             <!-- _____________________________________ -->
 
-            <p>Story Show Gallery consists of four files placed in the <strong>src</strong> directory:</p>
+            <p>Story Show Gallery consists of three files placed in the <strong>src</strong> directory:</p>
                 <ul>
                     <li><strong>ssg.js</strong> - all Javascript - jQuery code. At the begining is default confi&shy;guration and language localization.</li>
                     <li><strong>ssg.css</strong> - the gallery styles, includes icons and cursor</li>
                     <li><strong>ssg-loaded.html</strong> (optional) - a html file to load behind the last photo, typically a signpost to other galleries. 
                         Edit it to your liking.
                     </li>
-                    <li><strong>GridOverflow3D.css</strong> (optional) - CSS <a href="#layout">grid layout</a> for image thumbnails</li>
+                    <li><strong>GridOverflow3D.css</strong> (extra) - CSS <a href="#layout">grid layout</a> for image thumbnails</li>
                 </ul>
                 <br>
             <p>The <strong>src/modules</strong> directory contains files ready to use with React, Next.js and Typescript:</p>
@@ -644,9 +647,7 @@ iceland = [];
                On this page the restart method is used in singpost after the gallery. It runs another gallery without exit fullscreen mode or reloading a page.
             </p>
 
-  
-        
-        <a name='js-module'></a>
+        <a name='react-nextjs'></a>
 
         <h2>Gallery for React <img class='react' src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"> and Next.js</h2>
         <!-- _____________________________________ -->          
@@ -737,7 +738,7 @@ iceland = [];
                     <div class="topimg">
                         <a href="https://roman-flossler.github.io/StoryShowGallery/photos/in-the-center.jpg">
                             <img id="checker" src="https://roman-flossler.github.io/StoryShowGallery/thumbs/thumb_in-the-center.jpg" 
-                            alt="<i>The long caption on larger screens is split <b>into two columns</b>.</i><ins>•</ins>  All photos in this gallery are from Michal coal mine in Ostrava city. The present technical state of the mine site has been preserved in the original condition from 1912 - 1915.<ins>•</ins> You can see here chain dressing rooms, guildhall, lamp house, pithead, lamp house bridge and engine room with the original technical equipment." /></a>
+                            alt="<i>The long caption on larger screens is split <b>into two columns</b>.</i><ins>•</ins>All photos in this gallery are from Michal coal mine in Ostrava city. The present technical state of the mine site has been preserved in the original condition from 1912 - 1915.<ins>•</ins>You can see here chain dressing rooms, guildhall, lamp house, pithead, lamp house bridge and engine room with the original technical equipment." /></a>
                     </div>
 
                     <a href='https://roman-flossler.github.io/StoryShowGallery/photos/engine-room.jpg' data-author="photo by Flor">
@@ -761,7 +762,7 @@ iceland = [];
                 </p>
                 <p class="ssg ssglight">
                     <a href="https://roman-flossler.github.io/StoryShowGallery/photos/massive-pink-rabbit-maneater.JPG" data-author="sculptor: Adam Trbušek, photog: Roman Flössler"
-                     data-caption="<em>This is a  <strong>monument of the present</strong>, it shows the state of society. The system we nurture is eating us slowly and we don't pay attention.</em>                    
+                     data-caption="<em>This is a  <strong>monument of the present</strong>, it shows the state of society. The system we nurture is eating us slowly and we don't pay attention.</em>
                      <ins>★</ins>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. Etiam quis quam. Aliquam eRat volutpat. Duis sapien nunc, commodo etfuck.
                      <ins>★</ins>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. Etiam quis quam. Aliquam eRat volutpat. Duis sapien nunc, commodo etfuck.
                      <ins>★</ins>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc auctor. Etiam quis quam. Aliquam <strong>eRat</strong> volutpat. Duis sapien nunc, commodo etfuck.
@@ -792,7 +793,7 @@ iceland = [];
                 <li><a href="#order">Order of photos in the gallery</a></li>
                 <li><a href="#deeplinking">Deep linking, scrolling</a></li>                
                 <li><a href="#ssg-run">SSG.run & SSG.restart method</a></li>
-                <li><a href="#js-module">StoryShowGallery for React</a>
+                <li><a href="#react-nextjs">StoryShowGallery for React</a>
                     <img class='react' src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"></li>
                 <li class="mobileonli"><a href="#themes">🎨 Visual themes</a></li>
                 <div class="underline" >
@@ -969,8 +970,8 @@ SSG.cfg.onGalleryExit = <em>null;</em>  <span>// fires on the gallery exit</span
             iceland[ 0 ] = {
                 href: 'https://roman-flossler.github.io/StoryShowGallery/photos/reynisdrangar-black-beach.jpg',
                 alt: `Black beach Reynisfjara with Reynisdrangar rocks. There are sneaker waves which can easily pull you off into the sea. <ins>🞠</ins>
-                Legend says that the stacks originated when two trolls dragged a three-masted ship to land unsuccessfully and when daylight broke they became needles of rock.<ins>🞠</ins>
-                Reynisdrangar appears several times throughout Netflix's Icelandic original series Katla, and is particularly significant to the series' protagonist Gríma as the site of her mother's death.`
+                    Legend says that the stacks originated when two trolls dragged a three-masted ship to land unsuccessfully and when daylight broke they became needles of rock. <ins>🞠</ins>
+                    Reynisdrangar appears several times throughout Netflix's Icelandic original series Katla, and is particularly significant to the series' protagonist Gríma as the site of her mother's death.`
             };
             iceland[ 1 ] = {
                 href: 'https://roman-flossler.github.io/StoryShowGallery/photos/Seljalandsfoss.jpg',
