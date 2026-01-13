@@ -7,6 +7,7 @@
 	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 	<title>Story Show Gallery – photo gallery plugin for WordPress. It is mobile friendly, minimalist and vertical</title>
 	<link rel="icon" type="image/png" href="https://roman-flossler.github.io/StoryShowGallery/img/favicon.png" />
+	<link href="https://cdn.jsdelivr.net/npm/grid-overflow@1/src/GridOverflow3D.min.css" rel="stylesheet">
 	<meta property="og:site_name" content="Story Show Gallery for WordPress">
     <meta property="og:title" content="Story Show Gallery for WordPress">
     <meta property="og:url" content="https://roman-flossler.github.io/StoryShowGallery/wordpress/" >
@@ -50,6 +51,21 @@
 
 	 <!-- meta name='theme-color' content='#3197B4' -->
 	 <meta name="theme-color" content="#3D859A">
+	 <style>
+	 .gridOverflow {
+		--gridGap: 5px;		
+		--itemRounding: 3px;
+		--masonryItemHeight: 180px;
+
+	}
+	@media (max-width: 600px) {
+    .gridOverflow {        
+		--gridGap: 3px;		
+        --masonryItemHeight: 111px;
+		margin-inline: -1rem;
+      }
+    }
+	</style>
 </head>
 
 <body class="home blog wp-embed-responsive">
@@ -101,47 +117,40 @@
 		<h2 class="entry-title">Show a story with your photos!</h2>	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<div>
-<div>SSG is vertical gallery lightbox optimized for smartphones (notch area included). SSG will support your brand and marketing. It has optimally placed captions, full screen mode, no ugly arrows, EXIF info.</div>
+<div>SSG is vertical gallery lightbox optimized for smartphones (notch area included, works in portrait and landscape mode). SSG supports your <strong>brand building and social sharing</strong>. It has optimally placed captions, full screen mode, no ugly arrows, EXIF info. It's free.</div>
 </div>
 
-<p id="theme" style="margin-bottom: -1.3em;">
+<p id="theme" style="margin-bottom: 1.3em;">
 	<span style="letter-spacing: -0.03em;">Theme:</span>
 	<a class="color" style="background: #262626;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'dim' }})">Dim</a>
 	<a class="color" style="background: #161616;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'dark' }})">Dark</a>
 	<a class="color" style="background: black;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'black' }})">Black</a>
 	<a class="color" style="background: #f1f1f1; color: #333333;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { watermarkOpacity: 0.5, theme: 'light' }})">Light</a>
 </p>
+<p style="text-align: right; margin: 2rem;">Switch on fancy borders:<input class="toggle" onclick="window.displayBorder(this)" type="checkbox"></p>
 
-<div id="gallery-1" class="gallery galleryid-201 gallery-columns-3 gallery-size-thumbnail ssg"><figure class="gallery-item">
-			<div class="gallery-icon landscape">
-				<a href="../photos/faroe-islands-map.jpg" data-author="" class="fs"><img width="200" height="200" src="thumbs/faroe-islands-map-200x200.jpg" class="attachment-thumbnail size-thumbnail" 
-					alt="According to National Geographic the Faroe Islands are the world's most attractive archipelago." ></a>
-			</div></figure><figure class="gallery-item">
-			<div class="gallery-icon landscape">
-				<a href="../photos/klaksvik-sheeps.jpg" data-author="" class="fs"><img width="200" height="200" src="thumbs/klaksvik-200x200.jpg" class="attachment-thumbnail size-thumbnail" 
-					alt="There are more sheeps than people and nature is pristine." ></a>
-			</div></figure><figure class="gallery-item">
-			<div class="gallery-icon landscape">
-				<a href="../photos/sorvagsvatn-lake.jpg" class="fs"><img width="200" height="200" src="thumbs/traelanipa-200x200.jpg" class="attachment-thumbnail size-thumbnail" 
-					alt="Sørvágsvatn lake is placed on the edge of Traelanípa cliff. Incredible view." ></a>
-			</div></figure><figure class="gallery-item">
-			<div class="gallery-icon landscape">
-				<a href="../photos/mulafossur-panorama.jpg" class="fs"><img width="200" height="200" src="thumbs/mulafossur-panorama-200x200.jpg" class="attachment-thumbnail size-thumbnail" 
-					alt="" ></a>
-			</div></figure><figure class="gallery-item">
-			<div class="gallery-icon portrait">
-				<a href="../photos/puffins.jpg" class="fs" data-author=""><img width="200" height="200" src="thumbs/mykines-puffins-200x200.jpg" class="attachment-thumbnail size-thumbnail" 
-					alt="Colonies of Puffins are nesting on Mykines island." ></a>
-			</div></figure><figure class="gallery-item">
-			<div class="gallery-icon landscape">
-				<a href="../photos/mykines-lighthouse.jpg" class="fs"><img width="200" height="200" src="thumbs/mykines-lighthouse-200x200.jpg" class="attachment-thumbnail size-thumbnail" 
-					alt="Mykines island - it feels like at the end of the world." ></a>
-			</div></figure>
-		</div>
+<div id="gallery-1" class="gridOverflow go-masonry go-3Dfx ssg">			
+	<a href="../photos/faroe-islands-map.jpg" data-author="" class="go_gridItem fs"><img width="200" height="200" src="../photos/faroe-islands-map.jpg" class="attachment-thumbnail size-thumbnail" 
+		alt="According to National Geographic the Faroe Islands are the world's most attractive archipelago." ></a>
 
-<p style="text-align: right; margin: 1rem; padding-right: 3rem;">Switch on fancy borders:<input class="toggle" onclick="window.displayBorder(this)" type="checkbox"></p>
+	<a href="../photos/klaksvik-sheeps.jpg" data-author="" class="go_gridItem fs"><img width="200" height="200" src="../photos/klaksvik-sheeps.jpg" class="attachment-thumbnail size-thumbnail" 
+		alt="There are more sheeps than people and nature is pristine." ></a>
 
-<p>↑ Optional <strong>3D animation</strong> of image thumbnails is part of this plugin.</p>
+	<a href="../photos/sorvagsvatn-lake.jpg" class="go_gridItem fs"><img width="200" height="200" src="../photos/sorvagsvatn-lake.jpg" class="attachment-thumbnail size-thumbnail" 
+		alt="Sørvágsvatn lake is placed on the edge of Traelanípa cliff. Incredible view." ></a>
+
+	<a href="../photos/mulafossur-panorama.jpg" class="go_gridItem fs"><img width="200" height="200" src="../photos/mulafossur-panorama.jpg" class="attachment-thumbnail size-thumbnail" 
+		alt="" ></a>
+
+	<a href="../photos/puffins.jpg" class="go_gridItem fs" data-author=""><img width="200" height="200" src="../photos/puffins.jpg" class="attachment-thumbnail size-thumbnail" 
+		alt="Colonies of Puffins are nesting on Mykines island." ></a>
+
+	<a href="../photos/mykines-lighthouse.jpg" class="go_gridItem fs"><img width="200" height="200" src="../photos/mykines-lighthouse.jpg" class="attachment-thumbnail size-thumbnail" 
+		alt="Mykines island - it feels like at the end of the world." ></a>			
+</div>
+<br>
+
+<p><i>↑ Optional <strong>3D animation</strong> of image thumbnails is part of this plugin.</i></p>
 <p>SSG lightbox works with existing WordPress galleries (and images) or optionally with galleries made with other plugins. Story Show Gallery is Gutenberg ready and <strong>works out of the box</strong>.</p>
 
 <h2>Your photos in the main role</h2>
