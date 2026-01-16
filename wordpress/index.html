@@ -56,7 +56,7 @@
 		--gridGap: 5px;		
 		--itemRounding: 3px;
 		--masonryItemHeight: 180px;
-
+		--linkActionIcon: "▷";
 	}
 	@media (max-width: 600px) {
     .gridOverflow {        
@@ -114,22 +114,14 @@
 <article id="post-201" class="post-201 post type-post status-publish format-standard hentry category-uncategorized">
 	
 	<header class="entry-header">
-		<h2 class="entry-title">Show a story with your photos!</h2>	</header><!-- .entry-header -->
+		</header><!-- .entry-header -->
 	<div class="entry-content">
 		<div>
-<div>SSG is vertical gallery lightbox optimized for smartphones (notch area included, works in portrait and landscape mode). SSG supports your <strong>brand building and social sharing</strong>. It has optimally placed captions, full screen mode, no ugly arrows, EXIF info. It's free.</div>
+<div>Story Show Gallery is a lightbox gallery that focuses on delightful display of your photos in <strong>full screen</strong>. On smart phones it can utilize notch area and it works also in landscape mode. 
+	SSG supports brand building, optimal placing of captions, social sharing, deep linking, EXIF, etc. <strong>It’s free.</strong></div>
 </div>
-
-<p id="theme" style="margin-bottom: 1.3em;">
-	<span style="letter-spacing: -0.03em;">Theme:</span>
-	<a class="color" style="background: #262626;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'dim' }})">Dim</a>
-	<a class="color" style="background: #161616;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'dark' }})">Dark</a>
-	<a class="color" style="background: black;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'black' }})">Black</a>
-	<a class="color" style="background: #f1f1f1; color: #333333;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { watermarkOpacity: 0.5, theme: 'light' }})">Light</a>
-</p>
-<p style="text-align: right; margin: 2rem;">Switch on fancy borders:<input class="toggle" onclick="window.displayBorder(this)" type="checkbox"></p>
-
-<div id="gallery-1" class="gridOverflow go-masonry go-3Dfx ssg">			
+<p style="text-align: right; margin: 1.5rem;">Switch on fancy borders:<input class="toggle" onclick="window.displayBorder(this)" type="checkbox"></p>
+<div id="gallery-1" class="gridOverflow go-masonry go-3Dfx go-actionIcon ssg">			
 	<a href="../photos/faroe-islands-map.jpg" data-author="" class="go_gridItem fs"><img width="200" height="200" src="../photos/faroe-islands-map.jpg" class="attachment-thumbnail size-thumbnail" 
 		alt="According to National Geographic the Faroe Islands are the world's most attractive archipelago." ></a>
 
@@ -148,10 +140,20 @@
 	<a href="../photos/mykines-lighthouse.jpg" class="go_gridItem fs"><img width="200" height="200" src="../photos/mykines-lighthouse.jpg" class="attachment-thumbnail size-thumbnail" 
 		alt="Mykines island - it feels like at the end of the world." ></a>			
 </div>
-<br>
 
-<p><i>↑ Optional <strong>3D animation</strong> of image thumbnails is part of this plugin.</i></p>
-<p>SSG lightbox works with existing WordPress galleries (and images) or optionally with galleries made with other plugins. Story Show Gallery is Gutenberg ready and <strong>works out of the box</strong>.</p>
+<p id="theme" style="margin-top: 2rem;">
+	<span style="letter-spacing: -0.03em;">Theme:</span>
+	<a class="color" style="background: #262626;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'dim' }})">Dim</a>
+	<a class="color" style="background: #161616;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'dark' }})">Dark</a>
+	<a class="color" style="background: black;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { theme: 'black' }})">Black</a>
+	<a class="color" style="background: #f1f1f1; color: #333333;" onclick="SSG.run({ initImgID: 0, fs: true, cfg: { watermarkOpacity: 0.5, theme: 'light' }})">Light</a>
+</p>
+<br>
+<p>Optional <strong>3D animation</strong> of image thumbnails is part of this plugin.</p>
+<p>SSG lightbox works with existing <strong>WordPress galleries</strong> (and images) or optionally with galleries made with other plugins. The galleries/images are fully managed by WordPress, 
+	Story Show Gallery displays full size photos in a full screen lightbox (WP doesn’t have a default lightbox).</p>	
+	
+<p>Story Show Gallery is Gutenberg ready and <strong>works out of the box</strong>, you can also customise it with over 50 options.</p>
 
 <h2>Your photos in the main role</h2>
 <p>Give your photos maximum space with SSG full screen lightbox, it works on every display size. The gallery doesn’t have any <strong>ugly shining arrows</strong> next to a photo, which ruin visual experience.</p>
