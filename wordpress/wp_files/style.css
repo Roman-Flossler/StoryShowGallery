@@ -371,7 +371,10 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.6em 1.3333em;
+	margin: 0 0 1.6em 1.3333em;	
+	li {
+		margin-bottom: 1.5em;
+	}
 }
 
 ul {
@@ -3038,6 +3041,11 @@ p > video {
 	.secondary-toggle:before {
 		line-height: 54px;
 		width: 54px;
+	}
+
+	
+	.move-right {
+		margin-right: -7rem;
 	}
 
 	.post-password-form label,
