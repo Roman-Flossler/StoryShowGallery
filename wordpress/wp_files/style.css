@@ -371,10 +371,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.6em 1.3333em;	
-	li {
-		margin-bottom: 1.5em;
-	}
+	margin: 0 0 1.6em 1.3333em;		
 }
 
 ul {
@@ -6363,6 +6360,10 @@ aside h2 { color: #017d92 !important; }
 
 .entry-content ul:not(.wp-block-gallery) li {
 	padding-bottom: 0.8em;
+}
+
+.entry-content ol li {
+	padding-bottom: 1.5em;
 }
 
 .entry-content ul li img {
